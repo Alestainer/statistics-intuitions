@@ -56,23 +56,20 @@ def main():
     trials = task.build(stim_dir, n=args.n, seed=args.seed)
     print(f"{len(trials)} trials in {stim_dir}")
 
+    if not os.environ.get("OPENROUTER_API_KEY"):
+        sys.exit("Set OPENROUTER_API_KEY (see evals/README.md)")
     names = providers.available() if args.models == "available" else args.models.split(",")
-    if not names:
-        sys.exit("No models reachable — set an API key (see evals/README.md)")
 
     out_dir = os.path.join(HERE, "results", task.slug)
     os.makedirs(out_dir, exist_ok=True)
     prompt = task.question + INSTRUCTIONS
 
     for name in names:
-        fn, model_id, env = providers.REGISTRY[name]
-        if not os.environ.get(env):
-            print(f"skip {name}: {env} not set")
-            continue
+        model_id = providers.MODELS.get(name, name)   # unknown name = raw model id
         rows = []
         for t in trials:
             try:
-                raw = fn(model_id, t.image_path, prompt)
+                raw = providers.ask(model_id, t.image_path, prompt)
                 err = None
             except Exception as e:                      # keep going on failures
                 raw, err = "", f"{type(e).__name__}: {e}"[:200]

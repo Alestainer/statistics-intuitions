@@ -23,16 +23,19 @@ rule in its reasoning. That is what prompted the mirror control.
 
 ## Running
 
+Everything goes through [OpenRouter](https://openrouter.ai) — one key, every model.
+
 ```bash
-export OPENAI_API_KEY=...        # or ANTHROPIC_API_KEY, GEMINI_API_KEY,
-                                 # MOONSHOT_API_KEY (Kimi), DASHSCOPE_API_KEY (Qwen)
+export OPENROUTER_API_KEY=...
 python evals/run.py --task which-map-is-random --models available --n 20
 python evals/report.py --task which-map-is-random
 ```
 
-`--models available` runs whichever providers have a key set. Stimuli are regenerated from a fixed
-seed, so every model sees byte-identical images. Results are written per model to
-`results/<task>/<model>.json`, including each raw reply.
+`--models available` runs everything in `providers.MODELS`. To run a subset, pass short names
+(`--models gpt,claude`) or any OpenRouter model id directly (`--models openai/gpt-5-pro`).
+
+Stimuli are regenerated from a fixed seed, so every model sees byte-identical images. Results are
+written per model to `results/<task>/<model>.json`, including each raw reply.
 
 ## Adding a task
 
@@ -40,10 +43,14 @@ Drop a module in `tasks/` exposing a `TASK` with `slug`, `question`, and `build(
 returning `Trial`s. Pair each trial with a control that isolates the shortcut you are worried
 about — mirroring for left/right questions, relabelling for A/B ones.
 
-## Adding a provider
+## Adding a model
 
-One function in `providers.py` plus a `REGISTRY` entry. OpenAI, Kimi and Qwen share the
-chat/completions shape, so they reuse one adapter.
+One line in `providers.MODELS`. Check the id against `https://openrouter.ai/api/v1/models` first —
+that endpoint needs no auth, and `architecture.input_modalities` must include `"image"` for these
+tasks.
 
-Keys are read from the environment and never written to disk. Raw replies are stored; do not put
+Current set: `openai/gpt-5`, `anthropic/claude-sonnet-5`, `google/gemini-2.5-pro`,
+`moonshotai/kimi-k3`, `qwen/qwen3-vl-235b-a22b-instruct`.
+
+The key is read from the environment and never written to disk. Raw replies are stored; do not put
 anything in a prompt you would not publish.
