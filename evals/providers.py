@@ -19,9 +19,9 @@ TIMEOUT = 180
 # reasoning parameter (checked against https://openrouter.ai/api/v1/models).
 # DeepSeek is absent because every DeepSeek model on OpenRouter is text-in only.
 MODELS = {
-    "gpt":    "openai/gpt-5.6-sol-pro",            # reasoning.mode=pro; top price tier of the 5.6 family
+    "gpt":    "openai/gpt-5.6-sol",
     "claude": "anthropic/claude-opus-5",
-    "gemini": "google/gemini-3.1-pro-preview",
+    "gemini": "google/gemini-3.7-flash",           # newest Google vision model; no 3.6/3.7 Pro exists
     "kimi":   "moonshotai/kimi-k3",
     "qwen":   "qwen/qwen3.8-max",                  # flagship multimodal reasoning model
 }

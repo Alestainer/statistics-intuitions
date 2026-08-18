@@ -54,9 +54,9 @@ reasoning parameter:
 
 | name | model |
 |---|---|
-| `gpt` | `openai/gpt-5.6-sol-pro` |
+| `gpt` | `openai/gpt-5.6-sol` |
 | `claude` | `anthropic/claude-opus-5` |
-| `gemini` | `google/gemini-3.1-pro-preview` |
+| `gemini` | `google/gemini-3.7-flash` |
 | `kimi` | `moonshotai/kimi-k3` |
 | `qwen` | `qwen/qwen3.8-max` |
 
