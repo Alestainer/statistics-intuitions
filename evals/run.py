@@ -20,6 +20,27 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import providers  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(HERE)
+
+
+def load_dotenv():
+    """Read KEY=value lines from a .env at the repo root, if there is one.
+
+    Environment variables already set win, so an export always overrides the
+    file. The file is gitignored; never commit it.
+    """
+    path = os.path.join(REPO, ".env")
+    if not os.path.exists(path):
+        return
+    for line in open(path):
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        os.environ.setdefault(k.strip(), v.strip().strip("'\""))
+
+
+load_dotenv()
 
 INSTRUCTIONS = (
     "\n\nAnswer with exactly one word on the first line: LEFT or RIGHT. "

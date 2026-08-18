@@ -25,8 +25,22 @@ rule in its reasoning. That is what prompted the mirror control.
 
 Everything goes through [OpenRouter](https://openrouter.ai) — one key, every model.
 
+Get a key at [openrouter.ai/keys](https://openrouter.ai/keys), then either put it in a `.env` at the
+repo root (gitignored, read automatically):
+
+```
+OPENROUTER_API_KEY=sk-or-v1-...
+```
+
+or export it for the session:
+
 ```bash
-export OPENROUTER_API_KEY=...
+export OPENROUTER_API_KEY=sk-or-v1-...
+```
+
+Then:
+
+```bash
 python evals/run.py --task which-map-is-random --models available --n 20
 python evals/report.py --task which-map-is-random
 ```
