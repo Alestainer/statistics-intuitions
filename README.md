@@ -9,16 +9,21 @@ rather than merely statistically similar. Each notebook asserts that.
 
 | # | Article | Notebook | Source |
 |---|---|---|---|
-| 1 | Which map is random? | [`01-which-map-is-random.ipynb`](notebooks/01-which-map-is-random.ipynb) | Clarke, *An Application of the Poisson Distribution*, J. Inst. Actuaries **72** (1946), p.481 — [PDF](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf) |
+| 1 | Which map is random? | [`01-which-map-is-random.ipynb`](notebooks/01-which-map-is-random.ipynb) &nbsp; [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Alestainer/statistics-intuitions/blob/main/notebooks/01-which-map-is-random.ipynb) | Clarke, [*An Application of the Poisson Distribution*](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf), J. Inst. Actuaries **72** (1946), p.481 |
 
 ## Running
+
+Click the Colab badge — it opens in the browser with nothing to install.
+
+Locally:
 
 ```bash
 pip install matplotlib jupyter
 jupyter notebook notebooks/
 ```
 
-`matplotlib` is only needed for the plots; the statistics are standard library.
+`matplotlib` is only needed for the plots; the statistics are standard library. Notebooks are
+committed with their outputs, so the results and figures are visible without running anything.
 
 ## Licence
 
