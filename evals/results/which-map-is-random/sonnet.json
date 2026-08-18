@@ -1,0 +1,251 @@
+{
+ "model": "sonnet",
+ "model_id": "anthropic/claude-sonnet-5",
+ "task": "which-map-is-random",
+ "n": 20,
+ "seed": 7,
+ "cost_usd": 0.0555,
+ "ran_at": "2026-08-18T11:07:42Z",
+ "trials": [
+  {
+   "trial_id": "t00",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\n\nRIGHT shows clustering and empty gaps typical of true randomness, while LEFT's dots appear more evenly spaced, suggesting a non-random process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 60
+   }
+  },
+  {
+   "trial_id": "t00m",
+   "mirror_of": "t00",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows more clustering and empty gaps (e.g., clumps of dots with adjacent near-duplicates), which is characteristic of true randomness, whereas RIGHT looks more evenly spread, suggesting an artificial spacing process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 88
+   }
+  },
+  {
+   "trial_id": "t01",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nRight shows clumping and empty gaps typical of true randomness, while left's even spacing suggests a more regular, non-random process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 49
+   }
+  },
+  {
+   "trial_id": "t01m",
+   "mirror_of": "t01",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows more clustering and empty gaps (with a few tight clumps), which is typical of true randomness, while RIGHT looks more evenly spread out, suggesting a more regular generating process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 71
+   }
+  },
+  {
+   "trial_id": "t02",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows clustering and small gaps (e.g., near-touching pairs of dots), which is typical of true randomness, while LEFT looks more evenly spread, suggesting artificial regularity.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 70
+   }
+  },
+  {
+   "trial_id": "t02m",
+   "mirror_of": "t02",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nThe LEFT square shows more natural clustering and gaps typical of true randomness, while RIGHT appears more evenly spread, suggesting a process that enforces spacing.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 62
+   }
+  },
+  {
+   "trial_id": "t03",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows random clustering and empty gaps (with a few dots very close together), which is typical of a truly random process, while RIGHT's dots look more evenly spaced, suggesting a regularizing process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 73
+   }
+  },
+  {
+   "trial_id": "t03m",
+   "mirror_of": "t03",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nRIGHT shows clumping and empty gaps typical of true randomness, while LEFT's dots are too evenly spaced, suggesting a more uniform (non-random) process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 113
+   }
+  },
+  {
+   "trial_id": "t04",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\n\nRIGHT shows clumps and empty gaps (e.g., clusters along the left edge and sparse patches elsewhere) typical of true randomness, while LEFT's dots are more evenly spread, suggesting an artificial spacing process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 86
+   }
+  },
+  {
+   "trial_id": "t04m",
+   "mirror_of": "t04",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows more clustering and empty gaps (with some points very close together), which is characteristic of a truly random (Poisson) process, whereas RIGHT's dots appear more evenly spaced, suggesting a regularizing algorithm.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 85
+   }
+  },
+  {
+   "trial_id": "t05",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nLEFT shows more natural clustering and gaps typical of randomness, while RIGHT's dots appear more evenly spaced with a gap in the middle, suggesting a non-random process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 67
+   }
+  },
+  {
+   "trial_id": "t05m",
+   "mirror_of": "t05",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows random clustering and gaps (e.g., tight clumps of dots) typical of a Poisson process, while LEFT looks more evenly spaced, suggesting a non-random placement.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 69
+   }
+  },
+  {
+   "trial_id": "t06",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows more random clustering and empty gaps, while RIGHT's dots appear more evenly spaced, suggesting a non-random process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 54
+   }
+  },
+  {
+   "trial_id": "t06m",
+   "mirror_of": "t06",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nRight shows random clustering and empty gaps (with some tight pairs), while LEFT looks too evenly spread, consistent with an artificially regular process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 57
+   }
+  },
+  {
+   "trial_id": "t07",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows more clustering and empty gaps, consistent with true randomness, while LEFT looks more evenly spread out.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 46
+   }
+  },
+  {
+   "trial_id": "t07m",
+   "mirror_of": "t07",
+   "truth": "RIGHT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows a more even, unclustered scatter typical of true randomness, while RIGHT has visible clumping and streaky gaps suggesting a non-random (clustered) process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 66
+   }
+  },
+  {
+   "trial_id": "t08",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows more natural clustering and empty gaps typical of true randomness, while RIGHT's points appear more evenly spaced, suggesting a process that avoids close proximity.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 66
+   }
+  },
+  {
+   "trial_id": "t08m",
+   "mirror_of": "t08",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\n\nRIGHT shows random clustering and gaps (some tight clumps, empty patches), which is typical of a truly random Poisson process, while LEFT's dots look more evenly spread out, suggesting an artificial spacing constraint.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 83
+   }
+  },
+  {
+   "trial_id": "t09",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows more natural clustering and empty gaps, consistent with true randomness, while RIGHT's dots appear more evenly spread, suggesting an artificial spacing process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 66
+   }
+  },
+  {
+   "trial_id": "t09m",
+   "mirror_of": "t09",
+   "truth": "RIGHT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nLEFT shows a more even, uniformly scattered distribution typical of true randomness, while RIGHT has noticeable clusters and gaps suggesting a non-random process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 956,
+    "completion_tokens": 63
+   }
+  }
+ ]
+}

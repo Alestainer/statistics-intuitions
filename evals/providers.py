@@ -21,6 +21,7 @@ TIMEOUT = 180
 MODELS = {
     "gpt":    "openai/gpt-5.6-sol",
     "claude": "anthropic/claude-opus-5",
+    "sonnet": "anthropic/claude-sonnet-5",
     "gemini": "google/gemini-3.7-flash",           # newest Google vision model; no 3.6/3.7 Pro exists
     "kimi":   "moonshotai/kimi-k3",
     "qwen":   "qwen/qwen3.8-max",                  # flagship multimodal reasoning model
@@ -41,7 +42,12 @@ def ask(model_id, image_path, question):
             {"type": "image_url",
              "image_url": {"url": f"data:image/png;base64,{_b64(image_path)}"}},
         ]}],
-        "max_tokens": 300,
+        # Reasoning tokens are not covered by max_tokens, so cap them explicitly:
+        # one model burned 10k of them (6 minutes, $0.16) on a single image, and
+        # two others spent their whole budget thinking and returned nothing.
+        "reasoning": {"max_tokens": 1024},
+        "max_tokens": 1600,
+        "usage": {"include": True},
     }
     req = urllib.request.Request(
         f"{BASE_URL}/chat/completions",
@@ -57,7 +63,8 @@ def ask(model_id, image_path, question):
         d = json.loads(r.read().decode())
     if "choices" not in d:
         raise RuntimeError(str(d.get("error") or d)[:200])
-    return d["choices"][0]["message"]["content"]
+    msg = d["choices"][0]["message"]
+    return (msg.get("content") or "").strip(), (d.get("usage") or {})
 
 
 def available():

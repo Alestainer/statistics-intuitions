@@ -58,10 +58,12 @@ def main():
     rows = [score(json.load(open(f))) for f in files]
 
     print(f"\n{args.task}   (chance = 50%)\n")
-    hdr = f"{'model':12s} {'n':>4s} {'accuracy':>9s}"
+    hdr = f"{'model':10s} {'answered':>9s} {'correct':>8s} {'accuracy':>9s}"
     print(hdr); print("-" * len(hdr))
     for r in sorted(rows, key=lambda x: -x["accuracy"]):
-        print(f"{r['model']:12s} {r['n']:4d} {r['accuracy']*100:8.0f}%")
+        correct = round(r["accuracy"] * r["answered"])
+        print(f"{r['model']:10s} {r['answered']:6d}/{r['n']:<2d} {correct:8d} {r['accuracy']*100:8.0f}%")
+    print("\nAPI errors are excluded; accuracy is over answered trials only.")
     print()
 
 

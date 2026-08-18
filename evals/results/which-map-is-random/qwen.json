@@ -1,0 +1,251 @@
+{
+ "model": "qwen",
+ "model_id": "qwen/qwen3.8-max",
+ "task": "which-map-is-random",
+ "n": 20,
+ "seed": 7,
+ "cost_usd": 0.0761,
+ "ran_at": "2026-08-18T11:04:45Z",
+ "trials": [
+  {
+   "trial_id": "t00",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows the natural clumping and empty gaps characteristic of a truly random (Poisson) process, whereas LEFT is too evenly spaced, indicating a spacing-enforcing generator.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 349
+   }
+  },
+  {
+   "trial_id": "t00m",
+   "mirror_of": "t00",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nThe LEFT square shows the clumping and empty gaps (including near-overlapping dot pairs) characteristic of a true Poisson random process, whereas RIGHT is too evenly spaced, indicating a minimum-distance/blue-noise process.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 332
+   }
+  },
+  {
+   "trial_id": "t01",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nRIGHT shows the characteristic clumps, close pairs, and empty gaps of a Poisson (truly random) process, whereas LEFT is too uniformly spaced, indicating an anti\u2011clustering (blue\u2011noise/stratified) generator.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 501
+   }
+  },
+  {
+   "trial_id": "t01m",
+   "mirror_of": "t01",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nIt shows the clumping and empty gaps typical of a true Poisson (random) process, whereas RIGHT is too evenly spaced, indicating a spacing-enforcing (non-random) generator.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 363
+   }
+  },
+  {
+   "trial_id": "t02",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nThe RIGHT square shows the natural clumping and empty gaps characteristic of a Poisson random process, while the LEFT square is too evenly dispersed (anti-clustered), indicating a stratified/non-random generation.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 335
+   }
+  },
+  {
+   "trial_id": "t02m",
+   "mirror_of": "t02",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nThe LEFT square shows the clumps, close pairs, and empty gaps characteristic of a true Poisson random process, whereas RIGHT is too evenly spaced (stratified/blue\u2011noise).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 267
+   }
+  },
+  {
+   "trial_id": "t03",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nThe LEFT square shows the clumps and empty gaps typical of a genuine Poisson (random) process, whereas the RIGHT square is too evenly spaced, as if the points were deliberately spread out.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 351
+   }
+  },
+  {
+   "trial_id": "t03m",
+   "mirror_of": "t03",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows the natural clumps and empty gaps of a Poisson (truly random) process, while LEFT is too evenly spaced, as if points were forced apart.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 316
+   }
+  },
+  {
+   "trial_id": "t04",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nTrue randomness naturally produces clumps and empty gaps, and RIGHT shows such clustering while LEFT looks too evenly spaced (anti\u2011clustered/stratified).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 323
+   }
+  },
+  {
+   "trial_id": "t04m",
+   "mirror_of": "t04",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nTrue randomness produces visible clumps and empty gaps, and LEFT shows such clustering whereas RIGHT is too evenly spaced (stratified/blue\u2011noise).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 280
+   }
+  },
+  {
+   "trial_id": "t05",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nIt shows the clumping and empty gaps characteristic of a true Poisson (random) process, whereas RIGHT is too evenly spaced, indicating a minimum\u2011distance/stratified generation.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 296
+   }
+  },
+  {
+   "trial_id": "t05m",
+   "mirror_of": "t05",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nRIGHT shows the characteristic clumps, overlapping close pairs, and uneven gaps of independent random points, while LEFT is too evenly spaced (a minimum\u2011distance/blue\u2011noise process).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 392
+   }
+  },
+  {
+   "trial_id": "t06",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nLEFT shows the characteristic clumps and empty gaps of a Poisson (truly random) process, while RIGHT is too evenly spaced, indicating a jittered/stratified generator.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 308
+   }
+  },
+  {
+   "trial_id": "t06m",
+   "mirror_of": "t06",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nThe RIGHT square shows the clumping, near\u2011coincident dot pairs, and empty gaps characteristic of a Poisson random process, while the LEFT square is too evenly spaced (a minimum\u2011distance / blue\u2011noise pattern).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 519
+   }
+  },
+  {
+   "trial_id": "t07",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nIt shows the natural clumping and empty gaps characteristic of a true Poisson random process, whereas RIGHT is too evenly spaced (jittered/blue\u2011noise) to be genuinely random.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 290
+   }
+  },
+  {
+   "trial_id": "t07m",
+   "mirror_of": "t07",
+   "truth": "RIGHT",
+   "choice": "LEFT",
+   "raw": "LEFT\nThe LEFT square shows the natural clumping and conspicuous empty gaps that independent uniform sampling produces, whereas the RIGHT pattern is more evenly dispersed (as if points were forced to keep apart).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 941
+   }
+  },
+  {
+   "trial_id": "t08",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nIt shows the clumping and large empty gaps expected from a true Poisson (random) process, whereas the RIGHT panel is too evenly spaced, indicating an anti\u2011clustering (blue\u2011noise/Poisson\u2011disk) generator.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 464
+   }
+  },
+  {
+   "trial_id": "t08m",
+   "mirror_of": "t08",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows the local clumps and noticeable empty gaps characteristic of a true Poisson (random) process, whereas LEFT is too evenly spaced, as if a minimum-distance/jittered (blue-noise) rule were applied.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 426
+   }
+  },
+  {
+   "trial_id": "t09",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\nTrue randomness produces visible clumps and empty gaps, which LEFT shows, whereas RIGHT is too evenly spaced (a minimum\u2011distance/blue\u2011noise process).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 376
+   }
+  },
+  {
+   "trial_id": "t09m",
+   "mirror_of": "t09",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nRIGHT shows the natural clumping and noticeable empty gaps expected from independent random points, while LEFT looks too evenly space-filled (like a jittered/blue\u2011noise grid).",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 720,
+    "completion_tokens": 451
+   }
+  }
+ ]
+}

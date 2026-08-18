@@ -1,0 +1,251 @@
+{
+ "model": "kimi",
+ "model_id": "moonshotai/kimi-k3",
+ "task": "which-map-is-random",
+ "n": 20,
+ "seed": 7,
+ "cost_usd": 0.2547,
+ "ran_at": "2026-08-18T11:14:12Z",
+ "trials": [
+  {
+   "trial_id": "t00",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows the natural clumping and empty gaps expected from true randomness, while LEFT looks too evenly spread.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 162
+   }
+  },
+  {
+   "trial_id": "t00m",
+   "mirror_of": "t00",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt has the clumps and empty patches typical of true randomness, while RIGHT looks more evenly spread.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 390
+   }
+  },
+  {
+   "trial_id": "t01",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows the natural clumps and uneven gaps typical of a truly random Poisson pattern, while LEFT looks too evenly spaced.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 172
+   }
+  },
+  {
+   "trial_id": "t01m",
+   "mirror_of": "t01",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt shows the natural clumps and gaps of true randomness, while RIGHT looks too evenly spread.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 325
+   }
+  },
+  {
+   "trial_id": "t02",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "LEFT",
+   "raw": "LEFT\nIt shows the clustering and uneven gaps typical of true randomness, while RIGHT looks too evenly spaced.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 169
+   }
+  },
+  {
+   "trial_id": "t02m",
+   "mirror_of": "t02",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt shows the clumping and uneven gaps expected from true randomness.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 1369
+   }
+  },
+  {
+   "trial_id": "t03",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt shows the clumping and uneven gaps typical of true randomness, whereas RIGHT looks too evenly spread.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 199
+   }
+  },
+  {
+   "trial_id": "t03m",
+   "mirror_of": "t03",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows the uneven clusters and gaps typical of a truly random scatter.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 463
+   }
+  },
+  {
+   "trial_id": "t04",
+   "mirror_of": null,
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT  \nIt has the clumps and uneven gaps typical of true randomness, while LEFT looks too evenly spread.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 211
+   }
+  },
+  {
+   "trial_id": "t04m",
+   "mirror_of": "t04",
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt has the irregular clumps and gaps expected from true randomness, while RIGHT looks more evenly spaced.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 1740
+   }
+  },
+  {
+   "trial_id": "t05",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt shows the clumps and gaps typical of true randomness rather than even spacing.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 1061
+   }
+  },
+  {
+   "trial_id": "t05m",
+   "mirror_of": "t05",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT\nIt shows the clumps and uneven gaps typical of true randomness, while LEFT looks too evenly spread out.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 245
+   }
+  },
+  {
+   "trial_id": "t06",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt shows the clumps and uneven gaps typical of true randomness, while RIGHT looks more evenly spaced.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 182
+   }
+  },
+  {
+   "trial_id": "t06m",
+   "mirror_of": "t06",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT  \nIt shows the clumps and uneven gaps typical of true randomness rather than the more evenly spaced LEFT.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 201
+   }
+  },
+  {
+   "trial_id": "t07",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT\n\nIt shows the clumps and gaps typical of a Poisson random process, whereas RIGHT looks more evenly spaced.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 282
+   }
+  },
+  {
+   "trial_id": "t07m",
+   "mirror_of": "t07",
+   "truth": "RIGHT",
+   "choice": "LEFT",
+   "raw": "LEFT\nIt has the clumps and empty patches typical of true randomness, while RIGHT looks more evenly spaced.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 849
+   }
+  },
+  {
+   "trial_id": "t08",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt shows the clumps and empty gaps typical of true randomness rather than overly even spacing.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 222
+   }
+  },
+  {
+   "trial_id": "t08m",
+   "mirror_of": "t08",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT  \nIts clumps, close pairs, and uneven gaps are characteristic of a truly random point pattern.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 273
+   }
+  },
+  {
+   "trial_id": "t09",
+   "mirror_of": null,
+   "truth": "LEFT",
+   "choice": "LEFT",
+   "raw": "LEFT  \nIt has the clusters and uneven gaps typical of true randomness, while RIGHT looks more evenly spaced.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 341
+   }
+  },
+  {
+   "trial_id": "t09m",
+   "mirror_of": "t09",
+   "truth": "RIGHT",
+   "choice": "RIGHT",
+   "raw": "RIGHT  \nIts dots show the irregular clumps and gaps typical of true randomness.",
+   "error": null,
+   "tokens": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 4303
+   }
+  }
+ ]
+}

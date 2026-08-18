@@ -87,25 +87,45 @@ def main():
 
     for name in names:
         model_id = providers.MODELS.get(name, name)   # unknown name = raw model id
+        path = os.path.join(out_dir, f"{name}.json")
+
+        # Resume: keep any trial already answered without an error, so an
+        # interrupted or partial run is never paid for twice.
+        done, cost = {}, 0.0
+        if os.path.exists(path):
+            prev = json.load(open(path))
+            cost = prev.get("cost_usd", 0.0)
+            done = {r["trial_id"]: r for r in prev["trials"]
+                    if r.get("choice") and not r.get("error")}
+            if done:
+                print(f"  {name}: resuming, {len(done)} trials already recorded")
+
         rows = []
         for t in trials:
+            if t.trial_id in done:
+                rows.append(done[t.trial_id])
+                continue
             try:
-                raw = providers.ask(model_id, t.image_path, prompt)
+                raw, usage = providers.ask(model_id, t.image_path, prompt)
                 err = None
+                cost += usage.get("cost", 0.0) or 0.0
             except Exception as e:                      # keep going on failures
-                raw, err = "", f"{type(e).__name__}: {e}"[:200]
+                raw, usage, err = "", {}, f"{type(e).__name__}: {e}"[:200]
             choice = parse_choice(raw, t.options)
             rows.append({"trial_id": t.trial_id, "mirror_of": t.mirror_of,
                          "truth": t.answer, "choice": choice,
-                         "raw": (raw or "").strip()[:400], "error": err})
-            print(f"  {name} {t.trial_id}: {choice or '?'} (truth {t.answer})")
-            time.sleep(0.5)
-        path = os.path.join(out_dir, f"{name}.json")
-        json.dump({"model": name, "model_id": model_id, "task": task.slug,
-                   "n": len(rows), "seed": args.seed,
-                   "ran_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                   "trials": rows}, open(path, "w"), indent=1)
-        print(f"wrote {path}")
+                         "raw": (raw or "")[:600], "error": err,
+                         "tokens": {k: usage.get(k) for k in
+                                    ("prompt_tokens", "completion_tokens")}})
+            # Write after every trial: some models take minutes per call.
+            json.dump({"model": name, "model_id": model_id, "task": task.slug,
+                       "n": len(rows), "seed": args.seed, "cost_usd": round(cost, 4),
+                       "ran_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                       "trials": rows}, open(path, "w"), indent=1)
+            print(f"  {name} {t.trial_id}: {choice or '?'} (truth {t.answer})"
+                  f"{' [' + err + ']' if err else ''}")
+            time.sleep(0.3)
+        print(f"wrote {path}  (${cost:.3f})")
 
 
 if __name__ == "__main__":
