@@ -57,14 +57,12 @@ def main():
         raise SystemExit(f"no results for {args.task}")
     rows = [score(json.load(open(f))) for f in files]
 
-    print(f"\n{args.task}   (chance accuracy = 0.50)\n")
-    hdr = f"{'model':10s} {'n':>3s} {'acc':>6s} {'LEFT%':>7s} {'follows pattern':>16s} {'position-locked':>16s}"
+    print(f"\n{args.task}   (chance = 50%)\n")
+    hdr = f"{'model':12s} {'n':>4s} {'accuracy':>9s}"
     print(hdr); print("-" * len(hdr))
-    for r in rows:
-        print(f"{r['model']:10s} {r['n']:3d} {r['accuracy']:6.2f} {r['left_rate']*100:6.0f}% "
-              f"{r['pattern_consistent']*100:15.0f}% {r['position_locked']*100:15.0f}%")
-    print("\nfollows pattern: answer flipped with the mirrored image (reading the dots)")
-    print("position-locked: answer stayed on the same side (ignoring the dots)")
+    for r in sorted(rows, key=lambda x: -x["accuracy"]):
+        print(f"{r['model']:12s} {r['n']:4d} {r['accuracy']*100:8.0f}%")
+    print()
 
 
 if __name__ == "__main__":
