@@ -14,13 +14,16 @@ import urllib.request
 BASE_URL = "https://openrouter.ai/api/v1"
 TIMEOUT = 180
 
-# Short name -> OpenRouter model id. All confirmed vision-capable.
+# Short name -> OpenRouter model id.
+# Top reasoning model per lab, all confirmed to accept image input and expose a
+# reasoning parameter (checked against https://openrouter.ai/api/v1/models).
+# DeepSeek is absent because every DeepSeek model on OpenRouter is text-in only.
 MODELS = {
-    "gpt":    "openai/gpt-5",
-    "claude": "anthropic/claude-sonnet-5",
-    "gemini": "google/gemini-2.5-pro",
+    "gpt":    "openai/gpt-5.6-sol-pro",            # reasoning.mode=pro; top price tier of the 5.6 family
+    "claude": "anthropic/claude-opus-5",
+    "gemini": "google/gemini-3.1-pro-preview",
     "kimi":   "moonshotai/kimi-k3",
-    "qwen":   "qwen/qwen3-vl-235b-a22b-instruct",
+    "qwen":   "qwen/qwen3.8-max",                  # flagship multimodal reasoning model
 }
 
 

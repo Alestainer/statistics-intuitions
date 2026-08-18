@@ -49,8 +49,19 @@ One line in `providers.MODELS`. Check the id against `https://openrouter.ai/api/
 that endpoint needs no auth, and `architecture.input_modalities` must include `"image"` for these
 tasks.
 
-Current set: `openai/gpt-5`, `anthropic/claude-sonnet-5`, `google/gemini-2.5-pro`,
-`moonshotai/kimi-k3`, `qwen/qwen3-vl-235b-a22b-instruct`.
+Current set — top reasoning model per lab, each verified to accept image input and expose a
+reasoning parameter:
+
+| name | model |
+|---|---|
+| `gpt` | `openai/gpt-5.6-sol-pro` |
+| `claude` | `anthropic/claude-opus-5` |
+| `gemini` | `google/gemini-3.1-pro-preview` |
+| `kimi` | `moonshotai/kimi-k3` |
+| `qwen` | `qwen/qwen3.8-max` |
+
+DeepSeek is not in the set: every DeepSeek model on OpenRouter is text-in only, so it cannot attempt
+an image task. It becomes eligible for any task in the series whose stimuli are numeric or verbal.
 
 The key is read from the environment and never written to disk. Raw replies are stored; do not put
 anything in a prompt you would not publish.
