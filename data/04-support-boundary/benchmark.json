@@ -1,0 +1,804 @@
+{
+  "schemaVersion": 1,
+  "benchmarkId": "support-boundary-qa-v1",
+  "description": "Identify a function from the support boundary of a uniformly sampled point cloud.",
+  "systemPrompt": "You are answering a one-image visual boundary-identification task. The boundary curve is hidden. Choose the listed formula that separates the sampled region from the empty region. Return exactly one command and nothing else: OPTION A, OPTION B, OPTION C, or OPTION D.",
+  "validCommands": [
+    "OPTION A",
+    "OPTION B",
+    "OPTION C",
+    "OPTION D"
+  ],
+  "parserMode": "exact",
+  "generation": {
+    "questionCount": 20,
+    "pointCount": 200,
+    "rectangle": {
+      "xMin": -20.0,
+      "xMax": 20.0,
+      "yMin": -20.0,
+      "yMax": 20.0
+    },
+    "imageWidth": 768,
+    "imageHeight": 460,
+    "functions": [
+      {
+        "id": "line",
+        "family": "linear",
+        "formula": "y = x"
+      },
+      {
+        "id": "negative-line",
+        "family": "negative-linear",
+        "formula": "y = −3x"
+      },
+      {
+        "id": "parabola",
+        "family": "quadratic",
+        "formula": "y = x²"
+      },
+      {
+        "id": "sine",
+        "family": "periodic",
+        "formula": "y = 10 sin(x)"
+      },
+      {
+        "id": "exp-sine",
+        "family": "amplitude-modulated-periodic",
+        "formula": "y = e^(x/7) sin(x)"
+      },
+      {
+        "id": "log",
+        "family": "logarithmic",
+        "formula": "y = ln(x)"
+      },
+      {
+        "id": "exponential",
+        "family": "exponential",
+        "formula": "y = 2ˣ"
+      }
+    ]
+  },
+  "episodes": [
+    {
+      "id": "support-boundary-01",
+      "seed": "support-boundary-candidate-0001",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-01.png",
+      "imageSha256": "5f822c9e27c9d19819966ba790ff55e6ca38d45bbdd03ac3456ee2ba82414c21",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = −3x\nB: y = 2ˣ\nC: y = 10 sin(x)\nD: y = x²\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION A",
+      "hiddenFunctionId": "negative-line",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "B",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "C",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-02",
+      "seed": "support-boundary-candidate-0002",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-02.png",
+      "imageSha256": "6539b3d9f24abc72020611f050ff481fc720aec6a7a76f4ca7b5f7356efa3c1b",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = −3x\nB: y = x\nC: y = 2ˣ\nD: y = e^(x/7) sin(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION A",
+      "hiddenFunctionId": "negative-line",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "D",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-03",
+      "seed": "support-boundary-candidate-0003",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-03.png",
+      "imageSha256": "f86ac8bb2a7a1de1bf09b06fc6d794e281740027bc39455da5e3cf9c62ace15f",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = ln(x)\nB: y = x²\nC: y = 2ˣ\nD: y = 10 sin(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION A",
+      "hiddenFunctionId": "log",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        },
+        {
+          "label": "C",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "D",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-04",
+      "seed": "support-boundary-candidate-0004",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-04.png",
+      "imageSha256": "2123b969400dd179a4fabc05a0d520ca5c858d3572f440c0e83f92c417a2350b",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = x²\nB: y = x\nC: y = 2ˣ\nD: y = ln(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION A",
+      "hiddenFunctionId": "parabola",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "D",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-05",
+      "seed": "support-boundary-candidate-0005",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-05.png",
+      "imageSha256": "63b4f96cdde242ba7160b0389a71bdf129c36eb7c4fd348977505875b0530943",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = e^(x/7) sin(x)\nB: y = 10 sin(x)\nC: y = x\nD: y = ln(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION C",
+      "hiddenFunctionId": "line",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "C",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "D",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-06",
+      "seed": "support-boundary-candidate-0006",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-06.png",
+      "imageSha256": "399b4e2de5282fc9bb288c1aee6c9e188406390186c2675b538598a37dd4723d",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = 10 sin(x)\nB: y = ln(x)\nC: y = 2ˣ\nD: y = x²\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION A",
+      "hiddenFunctionId": "sine",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        },
+        {
+          "label": "C",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "D",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-07",
+      "seed": "support-boundary-candidate-0007",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-07.png",
+      "imageSha256": "8d6f60a91d500a05a7d5187b99fbe74d4ee1a29ad8467ec84edb1bf7c4200eed",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = ln(x)\nB: y = −3x\nC: y = x²\nD: y = 2ˣ\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION B",
+      "hiddenFunctionId": "negative-line",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "C",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        },
+        {
+          "label": "D",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-08",
+      "seed": "support-boundary-candidate-0012",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-08.png",
+      "imageSha256": "d8ac5b4908fe09f9c57c58a220b8cbbd350a230bc24e529f9b5d004cf08fcd84",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = ln(x)\nB: y = 2ˣ\nC: y = 10 sin(x)\nD: y = e^(x/7) sin(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION D",
+      "hiddenFunctionId": "exp-sine",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "C",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-09",
+      "seed": "support-boundary-candidate-0013",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-09.png",
+      "imageSha256": "a5f2fd159c5fecc648b9f2d95afe9dc9df18a35f6a2b0efe5923b41f8a0aa8dc",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = e^(x/7) sin(x)\nB: y = x\nC: y = 2ˣ\nD: y = ln(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION B",
+      "hiddenFunctionId": "line",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "D",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-10",
+      "seed": "support-boundary-candidate-0015",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-10.png",
+      "imageSha256": "32e60f5f07650b098b49f8205a14725b42cd5ee46b777024f8efc5b7dbd4ae45",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = −3x\nB: y = ln(x)\nC: y = e^(x/7) sin(x)\nD: y = 10 sin(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION C",
+      "hiddenFunctionId": "exp-sine",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "B",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        },
+        {
+          "label": "C",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-11",
+      "seed": "support-boundary-candidate-0016",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-11.png",
+      "imageSha256": "df22918a026dc8cda86d22fe74491fbddced2905ce20d994331e80d198fdeb86",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = e^(x/7) sin(x)\nB: y = x\nC: y = 10 sin(x)\nD: y = x²\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION C",
+      "hiddenFunctionId": "sine",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-12",
+      "seed": "support-boundary-candidate-0017",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-12.png",
+      "imageSha256": "c7ec359ed9a61f525287ece257818358f3eba946154e67f9c0fd0947ccd72886",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = −3x\nB: y = 2ˣ\nC: y = e^(x/7) sin(x)\nD: y = x²\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION B",
+      "hiddenFunctionId": "exponential",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "B",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "C",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-13",
+      "seed": "support-boundary-candidate-0018",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-13.png",
+      "imageSha256": "bbee5799f786e6065cd7a98ac86eb0b22bd97fd41b612c1c3bc54f6b280fe6df",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = 10 sin(x)\nB: y = x\nC: y = ln(x)\nD: y = −3x\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION C",
+      "hiddenFunctionId": "log",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-14",
+      "seed": "support-boundary-candidate-0019",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-14.png",
+      "imageSha256": "2d6393620e72e52cda48214252bd7e8f582b648233592856290a7af7bfb4fff9",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = −3x\nB: y = x²\nC: y = x\nD: y = ln(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION D",
+      "hiddenFunctionId": "log",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "B",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        },
+        {
+          "label": "C",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "D",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-15",
+      "seed": "support-boundary-candidate-0022",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-15.png",
+      "imageSha256": "48f37fa752825cf20bf166854ef5a8abf3a5d7af0979004655457fae6e236415",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = x²\nB: y = 10 sin(x)\nC: y = 2ˣ\nD: y = −3x\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION B",
+      "hiddenFunctionId": "sine",
+      "side": "below",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        },
+        {
+          "label": "B",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "C",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "D",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-16",
+      "seed": "support-boundary-candidate-0025",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-16.png",
+      "imageSha256": "870294481fa96dd42862b2914c559a0d7ccdbbd4a31b3e0b781bdbb7a7b76cf7",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = e^(x/7) sin(x)\nB: y = x\nC: y = x²\nD: y = −3x\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION C",
+      "hiddenFunctionId": "parabola",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        },
+        {
+          "label": "D",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-17",
+      "seed": "support-boundary-candidate-0032",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-17.png",
+      "imageSha256": "dd31ebe0974d8eded0d6a647c7592b795ad855763e4aa316b5edde5e69163bc9",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = −3x\nB: y = x\nC: y = 2ˣ\nD: y = ln(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION B",
+      "hiddenFunctionId": "line",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "D",
+          "functionId": "log",
+          "family": "logarithmic",
+          "formula": "y = ln(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-18",
+      "seed": "support-boundary-candidate-0037",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-18.png",
+      "imageSha256": "107afe5f531c180a63fe48a8da7283a28d7ecb71f29a5773c35039c60dacfff4",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = −3x\nB: y = x\nC: y = e^(x/7) sin(x)\nD: y = 2ˣ\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION D",
+      "hiddenFunctionId": "exponential",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "B",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "C",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-19",
+      "seed": "support-boundary-candidate-0039",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-19.png",
+      "imageSha256": "a1dcf514099a158f14125bd1d9e2bdb983fd2a42290b644e625af7bd1944f4fe",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = x\nB: y = 2ˣ\nC: y = −3x\nD: y = e^(x/7) sin(x)\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION D",
+      "hiddenFunctionId": "exp-sine",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "line",
+          "family": "linear",
+          "formula": "y = x"
+        },
+        {
+          "label": "B",
+          "functionId": "exponential",
+          "family": "exponential",
+          "formula": "y = 2ˣ"
+        },
+        {
+          "label": "C",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "D",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        }
+      ]
+    },
+    {
+      "id": "support-boundary-20",
+      "seed": "support-boundary-candidate-0076",
+      "pointCount": 200,
+      "image": "stimuli/support-boundary-20.png",
+      "imageSha256": "e6583a74df91178de2210a9c84d0eac2a188143ee6e3e45a2a28ae9078ca6945",
+      "userPrompt": "The image shows 200 points sampled uniformly in area from one side of a hidden boundary inside x,y ∈ [−20,20].\nWhich formula separates the sampled region from the empty region?\nA: y = e^(x/7) sin(x)\nB: y = −3x\nC: y = 10 sin(x)\nD: y = x²\nReturn exactly one command: OPTION A, OPTION B, OPTION C, or OPTION D.",
+      "answer": "OPTION D",
+      "hiddenFunctionId": "parabola",
+      "side": "above",
+      "options": [
+        {
+          "label": "A",
+          "functionId": "exp-sine",
+          "family": "amplitude-modulated-periodic",
+          "formula": "y = e^(x/7) sin(x)"
+        },
+        {
+          "label": "B",
+          "functionId": "negative-line",
+          "family": "negative-linear",
+          "formula": "y = −3x"
+        },
+        {
+          "label": "C",
+          "functionId": "sine",
+          "family": "periodic",
+          "formula": "y = 10 sin(x)"
+        },
+        {
+          "label": "D",
+          "functionId": "parabola",
+          "family": "quadratic",
+          "formula": "y = x²"
+        }
+      ]
+    }
+  ]
+}

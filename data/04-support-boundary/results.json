@@ -1,0 +1,994 @@
+{
+  "models": [
+    {
+      "model": "anthropic/claude-opus-5",
+      "episodes": [
+        {
+          "episodeId": "support-boundary-01",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION A",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.0
+        },
+        {
+          "episodeId": "support-boundary-02",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.012185
+        },
+        {
+          "episodeId": "support-boundary-03",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.005405
+        },
+        {
+          "episodeId": "support-boundary-04",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.01272
+        },
+        {
+          "episodeId": "support-boundary-05",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.003755
+        },
+        {
+          "episodeId": "support-boundary-06",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00373
+        },
+        {
+          "episodeId": "support-boundary-07",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.007005
+        },
+        {
+          "episodeId": "support-boundary-08",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.008405
+        },
+        {
+          "episodeId": "support-boundary-09",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.003745
+        },
+        {
+          "episodeId": "support-boundary-10",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00484
+        },
+        {
+          "episodeId": "support-boundary-11",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00374
+        },
+        {
+          "episodeId": "support-boundary-12",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.005365
+        },
+        {
+          "episodeId": "support-boundary-13",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00536
+        },
+        {
+          "episodeId": "support-boundary-14",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.005755
+        },
+        {
+          "episodeId": "support-boundary-15",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.0
+        },
+        {
+          "episodeId": "support-boundary-16",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.003715
+        },
+        {
+          "episodeId": "support-boundary-17",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00565
+        },
+        {
+          "episodeId": "support-boundary-18",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.016635
+        },
+        {
+          "episodeId": "support-boundary-19",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00486
+        },
+        {
+          "episodeId": "support-boundary-20",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00375
+        }
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "episodes": [
+        {
+          "episodeId": "support-boundary-01",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001488
+        },
+        {
+          "episodeId": "support-boundary-02",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION A",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001494
+        },
+        {
+          "episodeId": "support-boundary-03",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001492
+        },
+        {
+          "episodeId": "support-boundary-04",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001478
+        },
+        {
+          "episodeId": "support-boundary-05",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001502
+        },
+        {
+          "episodeId": "support-boundary-06",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001492
+        },
+        {
+          "episodeId": "support-boundary-07",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001482
+        },
+        {
+          "episodeId": "support-boundary-08",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001512
+        },
+        {
+          "episodeId": "support-boundary-09",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001498
+        },
+        {
+          "episodeId": "support-boundary-10",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001506
+        },
+        {
+          "episodeId": "support-boundary-11",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001496
+        },
+        {
+          "episodeId": "support-boundary-12",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001496
+        },
+        {
+          "episodeId": "support-boundary-13",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001484
+        },
+        {
+          "episodeId": "support-boundary-14",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001472
+        },
+        {
+          "episodeId": "support-boundary-15",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001488
+        },
+        {
+          "episodeId": "support-boundary-16",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001486
+        },
+        {
+          "episodeId": "support-boundary-17",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00148
+        },
+        {
+          "episodeId": "support-boundary-18",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001494
+        },
+        {
+          "episodeId": "support-boundary-19",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001494
+        },
+        {
+          "episodeId": "support-boundary-20",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.0015
+        }
+      ]
+    },
+    {
+      "model": "google/gemini-3.7-flash",
+      "episodes": [
+        {
+          "episodeId": "support-boundary-01",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001636875
+        },
+        {
+          "episodeId": "support-boundary-02",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001416375
+        },
+        {
+          "episodeId": "support-boundary-03",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001035375
+        },
+        {
+          "episodeId": "support-boundary-04",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION A",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.00803025
+        },
+        {
+          "episodeId": "support-boundary-05",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001127625
+        },
+        {
+          "episodeId": "support-boundary-06",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.000630375
+        },
+        {
+          "episodeId": "support-boundary-07",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.0011295
+        },
+        {
+          "episodeId": "support-boundary-08",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001254
+        },
+        {
+          "episodeId": "support-boundary-09",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.001343625
+        },
+        {
+          "episodeId": "support-boundary-10",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00143025
+        },
+        {
+          "episodeId": "support-boundary-11",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.002278125
+        },
+        {
+          "episodeId": "support-boundary-12",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001083
+        },
+        {
+          "episodeId": "support-boundary-13",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00115125
+        },
+        {
+          "episodeId": "support-boundary-14",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001546875
+        },
+        {
+          "episodeId": "support-boundary-15",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.000579375
+        },
+        {
+          "episodeId": "support-boundary-16",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.000821625
+        },
+        {
+          "episodeId": "support-boundary-17",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.000921
+        },
+        {
+          "episodeId": "support-boundary-18",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001191375
+        },
+        {
+          "episodeId": "support-boundary-19",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00089325
+        },
+        {
+          "episodeId": "support-boundary-20",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.000775125
+        }
+      ]
+    },
+    {
+      "model": "openai/gpt-5.6-sol",
+      "episodes": [
+        {
+          "episodeId": "support-boundary-01",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001232
+        },
+        {
+          "episodeId": "support-boundary-02",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.002238
+        },
+        {
+          "episodeId": "support-boundary-03",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00381
+        },
+        {
+          "episodeId": "support-boundary-04",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.004704
+        },
+        {
+          "episodeId": "support-boundary-05",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001236
+        },
+        {
+          "episodeId": "support-boundary-06",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00204
+        },
+        {
+          "episodeId": "support-boundary-07",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.003858
+        },
+        {
+          "episodeId": "support-boundary-08",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.003572
+        },
+        {
+          "episodeId": "support-boundary-09",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001236
+        },
+        {
+          "episodeId": "support-boundary-10",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00237
+        },
+        {
+          "episodeId": "support-boundary-11",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.002506
+        },
+        {
+          "episodeId": "support-boundary-12",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00447
+        },
+        {
+          "episodeId": "support-boundary-13",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.002286
+        },
+        {
+          "episodeId": "support-boundary-14",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.003892
+        },
+        {
+          "episodeId": "support-boundary-15",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.002012
+        },
+        {
+          "episodeId": "support-boundary-16",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001624
+        },
+        {
+          "episodeId": "support-boundary-17",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001226
+        },
+        {
+          "episodeId": "support-boundary-18",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.002138
+        },
+        {
+          "episodeId": "support-boundary-19",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.001238
+        },
+        {
+          "episodeId": "support-boundary-20",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.0019
+        }
+      ]
+    },
+    {
+      "model": "qwen/qwen3.8-max",
+      "episodes": [
+        {
+          "episodeId": "support-boundary-01",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.015002
+        },
+        {
+          "episodeId": "support-boundary-02",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.031746
+        },
+        {
+          "episodeId": "support-boundary-03",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.016328
+        },
+        {
+          "episodeId": "support-boundary-04",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.014854
+        },
+        {
+          "episodeId": "support-boundary-05",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.005446
+        },
+        {
+          "episodeId": "support-boundary-06",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION A",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.004958
+        },
+        {
+          "episodeId": "support-boundary-07",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.008702
+        },
+        {
+          "episodeId": "support-boundary-08",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.008104
+        },
+        {
+          "episodeId": "support-boundary-09",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.007422
+        },
+        {
+          "episodeId": "support-boundary-10",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00677
+        },
+        {
+          "episodeId": "support-boundary-11",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.011684
+        },
+        {
+          "episodeId": "support-boundary-12",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.007886
+        },
+        {
+          "episodeId": "support-boundary-13",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.015718
+        },
+        {
+          "episodeId": "support-boundary-14",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.009962
+        },
+        {
+          "episodeId": "support-boundary-15",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.004532
+        },
+        {
+          "episodeId": "support-boundary-16",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.005078
+        },
+        {
+          "episodeId": "support-boundary-17",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.004956
+        },
+        {
+          "episodeId": "support-boundary-18",
+          "parsedCommand": null,
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": false,
+          "costUsd": 0.014868
+        },
+        {
+          "episodeId": "support-boundary-19",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.004962
+        },
+        {
+          "episodeId": "support-boundary-20",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.005328
+        }
+      ]
+    },
+    {
+      "model": "z-ai/glm-5.3-flash",
+      "episodes": [
+        {
+          "episodeId": "support-boundary-01",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 7.9725e-05
+        },
+        {
+          "episodeId": "support-boundary-02",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.0002034
+        },
+        {
+          "episodeId": "support-boundary-03",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00019813
+        },
+        {
+          "episodeId": "support-boundary-04",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00123035
+        },
+        {
+          "episodeId": "support-boundary-05",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 5.1375e-05
+        },
+        {
+          "episodeId": "support-boundary-06",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION A",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 4.931e-05
+        },
+        {
+          "episodeId": "support-boundary-07",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 5.7485e-05
+        },
+        {
+          "episodeId": "support-boundary-08",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 7.41e-05
+        },
+        {
+          "episodeId": "support-boundary-09",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 5.1375e-05
+        },
+        {
+          "episodeId": "support-boundary-10",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 6.5525e-05
+        },
+        {
+          "episodeId": "support-boundary-11",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.000158285
+        },
+        {
+          "episodeId": "support-boundary-12",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.000106025
+        },
+        {
+          "episodeId": "support-boundary-13",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION C",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 0.00010816
+        },
+        {
+          "episodeId": "support-boundary-14",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 5.31e-05
+        },
+        {
+          "episodeId": "support-boundary-15",
+          "parsedCommand": "OPTION B",
+          "expectedAnswer": "OPTION B",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 5.6885e-05
+        },
+        {
+          "episodeId": "support-boundary-16",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION C",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.0002141
+        },
+        {
+          "episodeId": "support-boundary-17",
+          "parsedCommand": "OPTION A",
+          "expectedAnswer": "OPTION B",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 1.42e-05
+        },
+        {
+          "episodeId": "support-boundary-18",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.00049395
+        },
+        {
+          "episodeId": "support-boundary-19",
+          "parsedCommand": "OPTION D",
+          "expectedAnswer": "OPTION D",
+          "correct": true,
+          "strictlyFormatted": true,
+          "costUsd": 0.0020532
+        },
+        {
+          "episodeId": "support-boundary-20",
+          "parsedCommand": "OPTION C",
+          "expectedAnswer": "OPTION D",
+          "correct": false,
+          "strictlyFormatted": true,
+          "costUsd": 1.4725e-05
+        }
+      ]
+    }
+  ]
+}

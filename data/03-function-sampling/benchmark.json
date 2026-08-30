@@ -1,0 +1,782 @@
+{
+  "schemaVersion": 1,
+  "benchmarkId": "function-sampling-anton-human-v1",
+  "seed": "anton-human-v1",
+  "maxSamples": 6,
+  "zoo": [
+    "linear",
+    "convex",
+    "log",
+    "reciprocal",
+    "hump",
+    "valley",
+    "periodic",
+    "plateau"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "reciprocal",
+          "variantId": "reciprocal-1"
+        },
+        {
+          "label": "B",
+          "familyId": "hump",
+          "variantId": "hump-1"
+        },
+        {
+          "label": "C",
+          "familyId": "log",
+          "variantId": "log-4"
+        },
+        {
+          "label": "D",
+          "familyId": "linear",
+          "variantId": "linear-3"
+        }
+      ],
+      "sampleXs": [
+        0.94714163,
+        0.48809477,
+        0.88371827,
+        0.13248822,
+        0.28621753,
+        0.07196178
+      ],
+      "hiddenFamilyId": "hump",
+      "hiddenLabels": [
+        "B"
+      ]
+    },
+    {
+      "round": 2,
+      "scenario": "equivalent-hidden",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "log",
+          "variantId": "log-4"
+        },
+        {
+          "label": "B",
+          "familyId": "reciprocal",
+          "variantId": "reciprocal-1"
+        },
+        {
+          "label": "C",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        },
+        {
+          "label": "D",
+          "familyId": "reciprocal",
+          "variantId": "reciprocal-3"
+        }
+      ],
+      "sampleXs": [
+        0.36821951,
+        0.0564503,
+        0.22938373,
+        0.68590928,
+        0.60538555,
+        0.90731436
+      ],
+      "hiddenFamilyId": "reciprocal",
+      "hiddenLabels": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "round": 3,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "plateau",
+          "variantId": "plateau-1"
+        },
+        {
+          "label": "B",
+          "familyId": "linear",
+          "variantId": "linear-1"
+        },
+        {
+          "label": "C",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-4"
+        }
+      ],
+      "sampleXs": [
+        0.8407503,
+        0.90723052,
+        0.22830513,
+        0.14348764,
+        0.738405,
+        0.3706959
+      ],
+      "hiddenFamilyId": "hump",
+      "hiddenLabels": [
+        "C"
+      ]
+    },
+    {
+      "round": 4,
+      "scenario": "equivalent-decoy",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "plateau",
+          "variantId": "plateau-1"
+        },
+        {
+          "label": "B",
+          "familyId": "hump",
+          "variantId": "hump-1"
+        },
+        {
+          "label": "C",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        },
+        {
+          "label": "D",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        }
+      ],
+      "sampleXs": [
+        0.93560247,
+        0.74184545,
+        0.28183429,
+        0.35818929,
+        0.83700614,
+        0.63777871
+      ],
+      "hiddenFamilyId": "plateau",
+      "hiddenLabels": [
+        "A"
+      ]
+    },
+    {
+      "round": 5,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "plateau",
+          "variantId": "plateau-1"
+        },
+        {
+          "label": "B",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        },
+        {
+          "label": "C",
+          "familyId": "periodic",
+          "variantId": "sine-4pi"
+        },
+        {
+          "label": "D",
+          "familyId": "reciprocal",
+          "variantId": "reciprocal-1"
+        }
+      ],
+      "sampleXs": [
+        0.0594765,
+        0.78167927,
+        0.53589244,
+        0.25291387,
+        0.11802595,
+        0.6000088
+      ],
+      "hiddenFamilyId": "hump",
+      "hiddenLabels": [
+        "B"
+      ]
+    },
+    {
+      "round": 6,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "convex",
+          "variantId": "square-1"
+        },
+        {
+          "label": "B",
+          "familyId": "plateau",
+          "variantId": "plateau-3"
+        },
+        {
+          "label": "C",
+          "familyId": "linear",
+          "variantId": "linear-3"
+        },
+        {
+          "label": "D",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        }
+      ],
+      "sampleXs": [
+        0.65365489,
+        0.56744325,
+        0.32042847,
+        0.38825837,
+        0.50948091,
+        0.76023797
+      ],
+      "hiddenFamilyId": "convex",
+      "hiddenLabels": [
+        "A"
+      ]
+    },
+    {
+      "round": 7,
+      "scenario": "equivalent-hidden",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "plateau",
+          "variantId": "plateau-1"
+        },
+        {
+          "label": "B",
+          "familyId": "hump",
+          "variantId": "hump-1"
+        },
+        {
+          "label": "C",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-1"
+        }
+      ],
+      "sampleXs": [
+        0.71872577,
+        0.54046378,
+        0.47072488,
+        0.39700535,
+        0.10829346,
+        0.29787565
+      ],
+      "hiddenFamilyId": "hump",
+      "hiddenLabels": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "round": 8,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "log",
+          "variantId": "log-1"
+        },
+        {
+          "label": "B",
+          "familyId": "reciprocal",
+          "variantId": "reciprocal-1"
+        },
+        {
+          "label": "C",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        },
+        {
+          "label": "D",
+          "familyId": "linear",
+          "variantId": "linear-3"
+        }
+      ],
+      "sampleXs": [
+        0.74263143,
+        0.05513455,
+        0.80488805,
+        0.54603311,
+        0.47638922,
+        0.66180773
+      ],
+      "hiddenFamilyId": "linear",
+      "hiddenLabels": [
+        "D"
+      ]
+    },
+    {
+      "round": 9,
+      "scenario": "equivalent-decoy",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "reciprocal",
+          "variantId": "reciprocal-1"
+        },
+        {
+          "label": "B",
+          "familyId": "reciprocal",
+          "variantId": "reciprocal-3"
+        },
+        {
+          "label": "C",
+          "familyId": "valley",
+          "variantId": "valley-3"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-1"
+        }
+      ],
+      "sampleXs": [
+        0.09867829,
+        0.3170858,
+        0.41021883,
+        0.79919762,
+        0.58411009,
+        0.48233827
+      ],
+      "hiddenFamilyId": "valley",
+      "hiddenLabels": [
+        "C"
+      ]
+    },
+    {
+      "round": 10,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "periodic",
+          "variantId": "sine-4pi"
+        },
+        {
+          "label": "B",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        },
+        {
+          "label": "C",
+          "familyId": "linear",
+          "variantId": "linear-3"
+        },
+        {
+          "label": "D",
+          "familyId": "valley",
+          "variantId": "valley-3"
+        }
+      ],
+      "sampleXs": [
+        0.15056416,
+        0.77052045,
+        0.54005498,
+        0.09136111,
+        0.31311187,
+        0.25534226
+      ],
+      "hiddenFamilyId": "valley",
+      "hiddenLabels": [
+        "D"
+      ]
+    },
+    {
+      "round": 11,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "convex",
+          "variantId": "square-4"
+        },
+        {
+          "label": "B",
+          "familyId": "log",
+          "variantId": "log-1"
+        },
+        {
+          "label": "C",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        },
+        {
+          "label": "D",
+          "familyId": "plateau",
+          "variantId": "plateau-1"
+        }
+      ],
+      "sampleXs": [
+        0.36111557,
+        0.84459632,
+        0.4649155,
+        0.69432299,
+        0.08312966,
+        0.22891332
+      ],
+      "hiddenFamilyId": "convex",
+      "hiddenLabels": [
+        "A"
+      ]
+    },
+    {
+      "round": 12,
+      "scenario": "equivalent-hidden",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "valley",
+          "variantId": "valley-3"
+        },
+        {
+          "label": "B",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        },
+        {
+          "label": "C",
+          "familyId": "plateau",
+          "variantId": "plateau-3"
+        },
+        {
+          "label": "D",
+          "familyId": "periodic",
+          "variantId": "sine-4pi"
+        }
+      ],
+      "sampleXs": [
+        0.2698964,
+        0.72249067,
+        0.38336903,
+        0.48238398,
+        0.13631157,
+        0.0458982
+      ],
+      "hiddenFamilyId": "valley",
+      "hiddenLabels": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "round": 13,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "plateau",
+          "variantId": "plateau-3"
+        },
+        {
+          "label": "B",
+          "familyId": "convex",
+          "variantId": "square-4"
+        },
+        {
+          "label": "C",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-1"
+        }
+      ],
+      "sampleXs": [
+        0.21683603,
+        0.44779931,
+        0.56808945,
+        0.35525221,
+        0.81978803,
+        0.88165159
+      ],
+      "hiddenFamilyId": "valley",
+      "hiddenLabels": [
+        "C"
+      ]
+    },
+    {
+      "round": 14,
+      "scenario": "equivalent-decoy",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "periodic",
+          "variantId": "sine-4pi"
+        },
+        {
+          "label": "B",
+          "familyId": "periodic",
+          "variantId": "sine-2pi"
+        },
+        {
+          "label": "C",
+          "familyId": "valley",
+          "variantId": "valley-3"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-1"
+        }
+      ],
+      "sampleXs": [
+        0.91054758,
+        0.63510908,
+        0.34454995,
+        0.10901,
+        0.23582265,
+        0.76146375
+      ],
+      "hiddenFamilyId": "valley",
+      "hiddenLabels": [
+        "C"
+      ]
+    },
+    {
+      "round": 15,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "plateau",
+          "variantId": "plateau-3"
+        },
+        {
+          "label": "B",
+          "familyId": "convex",
+          "variantId": "square-4"
+        },
+        {
+          "label": "C",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-1"
+        }
+      ],
+      "sampleXs": [
+        0.6108009,
+        0.11975147,
+        0.35879474,
+        0.6840116,
+        0.95575778,
+        0.30327232
+      ],
+      "hiddenFamilyId": "convex",
+      "hiddenLabels": [
+        "B"
+      ]
+    },
+    {
+      "round": 16,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "hump",
+          "variantId": "hump-1"
+        },
+        {
+          "label": "B",
+          "familyId": "linear",
+          "variantId": "linear-3"
+        },
+        {
+          "label": "C",
+          "familyId": "plateau",
+          "variantId": "plateau-1"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-4"
+        }
+      ],
+      "sampleXs": [
+        0.45461892,
+        0.60682465,
+        0.24019255,
+        0.3274389,
+        0.05270963,
+        0.82384485
+      ],
+      "hiddenFamilyId": "hump",
+      "hiddenLabels": [
+        "A"
+      ]
+    },
+    {
+      "round": 17,
+      "scenario": "equivalent-hidden",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "periodic",
+          "variantId": "sine-4pi"
+        },
+        {
+          "label": "B",
+          "familyId": "linear",
+          "variantId": "linear-3"
+        },
+        {
+          "label": "C",
+          "familyId": "linear",
+          "variantId": "linear-1"
+        },
+        {
+          "label": "D",
+          "familyId": "valley",
+          "variantId": "valley-1"
+        }
+      ],
+      "sampleXs": [
+        0.57011864,
+        0.17623794,
+        0.91620453,
+        0.82161008,
+        0.6356627,
+        0.26294495
+      ],
+      "hiddenFamilyId": "linear",
+      "hiddenLabels": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "round": 18,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "convex",
+          "variantId": "square-1"
+        },
+        {
+          "label": "B",
+          "familyId": "linear",
+          "variantId": "linear-3"
+        },
+        {
+          "label": "C",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        },
+        {
+          "label": "D",
+          "familyId": "periodic",
+          "variantId": "sine-2pi"
+        }
+      ],
+      "sampleXs": [
+        0.34256911,
+        0.45556536,
+        0.77706074,
+        0.6365127,
+        0.1294287,
+        0.26281488
+      ],
+      "hiddenFamilyId": "hump",
+      "hiddenLabels": [
+        "C"
+      ]
+    },
+    {
+      "round": 19,
+      "scenario": "equivalent-decoy",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "convex",
+          "variantId": "square-4"
+        },
+        {
+          "label": "B",
+          "familyId": "hump",
+          "variantId": "hump-1"
+        },
+        {
+          "label": "C",
+          "familyId": "periodic",
+          "variantId": "sine-4pi"
+        },
+        {
+          "label": "D",
+          "familyId": "convex",
+          "variantId": "square-1"
+        }
+      ],
+      "sampleXs": [
+        0.31747809,
+        0.39790055,
+        0.22451942,
+        0.05138486,
+        0.63755222,
+        0.84563756
+      ],
+      "hiddenFamilyId": "hump",
+      "hiddenLabels": [
+        "B"
+      ]
+    },
+    {
+      "round": 20,
+      "scenario": "normal",
+      "cards": [
+        {
+          "label": "A",
+          "familyId": "plateau",
+          "variantId": "plateau-1"
+        },
+        {
+          "label": "B",
+          "familyId": "hump",
+          "variantId": "hump-2"
+        },
+        {
+          "label": "C",
+          "familyId": "linear",
+          "variantId": "linear-1"
+        },
+        {
+          "label": "D",
+          "familyId": "log",
+          "variantId": "log-4"
+        }
+      ],
+      "sampleXs": [
+        0.46412264,
+        0.2845933,
+        0.94970563,
+        0.66836332,
+        0.36352853,
+        0.73397023
+      ],
+      "hiddenFamilyId": "plateau",
+      "hiddenLabels": [
+        "A"
+      ]
+    }
+  ]
+}
