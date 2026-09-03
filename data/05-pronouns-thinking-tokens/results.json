@@ -1,0 +1,1757 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "reference-style-reasoning-v1",
+  "calls": 192,
+  "reported_cost_usd": 0.1300953,
+  "missing_reasoning_token_calls": 0,
+  "primary_pooled_item_model_delta": {
+    "n": 72,
+    "mean": 16.208333333333332,
+    "median": 0.0,
+    "min": -42,
+    "max": 202
+  },
+  "ambiguous_pooled_item_model_delta": {
+    "n": 24,
+    "mean": 148.91666666666666,
+    "median": 10.0,
+    "min": -40,
+    "max": 2042
+  },
+  "per_model": {
+    "anthropic/claude-opus-5": {
+      "provider": [
+        "Azure"
+      ],
+      "reported_cost_usd": 0.0477,
+      "strictly_formatted_calls": 32,
+      "primary": {
+        "pairs": [
+          {
+            "item_id": "01",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "02",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 37,
+            "delta_reasoning_tokens": 37,
+            "delta_prompt_tokens": -10,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "03",
+            "explicit_reasoning_tokens": 15,
+            "referential_reasoning_tokens": 15,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "05",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 29,
+            "delta_reasoning_tokens": 29,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "06",
+            "explicit_reasoning_tokens": 28,
+            "referential_reasoning_tokens": 44,
+            "delta_reasoning_tokens": 16,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "07",
+            "explicit_reasoning_tokens": 39,
+            "referential_reasoning_tokens": 42,
+            "delta_reasoning_tokens": 3,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "09",
+            "explicit_reasoning_tokens": 42,
+            "referential_reasoning_tokens": 79,
+            "delta_reasoning_tokens": 37,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "10",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -9,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "11",
+            "explicit_reasoning_tokens": 17,
+            "referential_reasoning_tokens": 34,
+            "delta_reasoning_tokens": 17,
+            "delta_prompt_tokens": -8,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "13",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -22,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "14",
+            "explicit_reasoning_tokens": 15,
+            "referential_reasoning_tokens": 15,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "15",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -14,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          }
+        ],
+        "complete_reasoning_pairs": 12,
+        "explicit_reasoning_tokens": {
+          "n": 12,
+          "mean": 13,
+          "median": 7.5,
+          "min": 0,
+          "max": 42
+        },
+        "referential_reasoning_tokens": {
+          "n": 12,
+          "mean": 24.583333333333332,
+          "median": 22.0,
+          "min": 0,
+          "max": 79
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 12,
+          "mean": 11.583333333333334,
+          "median": 1.5,
+          "min": 0,
+          "max": 37
+        },
+        "delta_signs": {
+          "positive": 6,
+          "zero": 6,
+          "negative": 0
+        },
+        "paired_prompt_token_delta": {
+          "n": 12,
+          "mean": -9.75,
+          "median": -11.0,
+          "min": -22,
+          "max": -1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 12,
+          "mean": 11.583333333333334,
+          "median": 1.5,
+          "min": 0,
+          "max": 37
+        }
+      },
+      "ambiguous_diagnostic": {
+        "pairs": [
+          {
+            "item_id": "04",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -10,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "08",
+            "explicit_reasoning_tokens": 8,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": -8,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "12",
+            "explicit_reasoning_tokens": 75,
+            "referential_reasoning_tokens": 50,
+            "delta_reasoning_tokens": -25,
+            "delta_prompt_tokens": -7,
+            "explicit_correct": false,
+            "referential_correct": true,
+            "provider": "Azure"
+          },
+          {
+            "item_id": "16",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 125,
+            "delta_reasoning_tokens": 125,
+            "delta_prompt_tokens": -11,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "Azure"
+          }
+        ],
+        "complete_reasoning_pairs": 4,
+        "explicit_reasoning_tokens": {
+          "n": 4,
+          "mean": 20.75,
+          "median": 4.0,
+          "min": 0,
+          "max": 75
+        },
+        "referential_reasoning_tokens": {
+          "n": 4,
+          "mean": 43.75,
+          "median": 25.0,
+          "min": 0,
+          "max": 125
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 4,
+          "mean": 23,
+          "median": -4.0,
+          "min": -25,
+          "max": 125
+        },
+        "delta_signs": {
+          "positive": 1,
+          "zero": 1,
+          "negative": 2
+        },
+        "paired_prompt_token_delta": {
+          "n": 4,
+          "mean": -7.5,
+          "median": -8.5,
+          "min": -11,
+          "max": -2
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 4,
+            "mean": 0.75,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 4,
+            "mean": 0.5,
+            "median": 0.5,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 1,
+          "mean": 0,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    "anthropic/claude-sonnet-5": {
+      "provider": [
+        "Claude Platform on AWS"
+      ],
+      "reported_cost_usd": 0.01497,
+      "strictly_formatted_calls": 27,
+      "primary": {
+        "pairs": [
+          {
+            "item_id": "01",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "02",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 26,
+            "delta_reasoning_tokens": 26,
+            "delta_prompt_tokens": -10,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "03",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "05",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "06",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "07",
+            "explicit_reasoning_tokens": 55,
+            "referential_reasoning_tokens": 55,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "09",
+            "explicit_reasoning_tokens": 56,
+            "referential_reasoning_tokens": 60,
+            "delta_reasoning_tokens": 4,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "10",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -9,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "11",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -8,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "13",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -22,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "14",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -12,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "15",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -14,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          }
+        ],
+        "complete_reasoning_pairs": 12,
+        "explicit_reasoning_tokens": {
+          "n": 12,
+          "mean": 9.25,
+          "median": 0.0,
+          "min": 0,
+          "max": 56
+        },
+        "referential_reasoning_tokens": {
+          "n": 12,
+          "mean": 11.75,
+          "median": 0.0,
+          "min": 0,
+          "max": 60
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 12,
+          "mean": 2.5,
+          "median": 0.0,
+          "min": 0,
+          "max": 26
+        },
+        "delta_signs": {
+          "positive": 2,
+          "zero": 10,
+          "negative": 0
+        },
+        "paired_prompt_token_delta": {
+          "n": 12,
+          "mean": -9.75,
+          "median": -11.0,
+          "min": -22,
+          "max": -1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 12,
+          "mean": 2.5,
+          "median": 0.0,
+          "min": 0,
+          "max": 26
+        }
+      },
+      "ambiguous_diagnostic": {
+        "pairs": [
+          {
+            "item_id": "04",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -10,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "08",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "12",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -7,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          },
+          {
+            "item_id": "16",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -11,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Claude Platform on AWS"
+          }
+        ],
+        "complete_reasoning_pairs": 4,
+        "explicit_reasoning_tokens": {
+          "n": 4,
+          "mean": 0,
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "referential_reasoning_tokens": {
+          "n": 4,
+          "mean": 0,
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 4,
+          "mean": 0,
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "delta_signs": {
+          "positive": 0,
+          "zero": 4,
+          "negative": 0
+        },
+        "paired_prompt_token_delta": {
+          "n": 4,
+          "mean": -7.5,
+          "median": -8.5,
+          "min": -11,
+          "max": -2
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 4,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 4,
+            "mean": 0.75,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 3,
+          "mean": 0,
+          "median": 0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    "google/gemini-3.8-flash": {
+      "provider": [
+        "Google AI Studio"
+      ],
+      "reported_cost_usd": 0.016299750000000002,
+      "strictly_formatted_calls": 32,
+      "primary": {
+        "pairs": [
+          {
+            "item_id": "01",
+            "explicit_reasoning_tokens": 76,
+            "referential_reasoning_tokens": 100,
+            "delta_reasoning_tokens": 24,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "02",
+            "explicit_reasoning_tokens": 91,
+            "referential_reasoning_tokens": 103,
+            "delta_reasoning_tokens": 12,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "03",
+            "explicit_reasoning_tokens": 67,
+            "referential_reasoning_tokens": 67,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "05",
+            "explicit_reasoning_tokens": 45,
+            "referential_reasoning_tokens": 99,
+            "delta_reasoning_tokens": 54,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "06",
+            "explicit_reasoning_tokens": 120,
+            "referential_reasoning_tokens": 187,
+            "delta_reasoning_tokens": 67,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "07",
+            "explicit_reasoning_tokens": 97,
+            "referential_reasoning_tokens": 92,
+            "delta_reasoning_tokens": -5,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "09",
+            "explicit_reasoning_tokens": 87,
+            "referential_reasoning_tokens": 108,
+            "delta_reasoning_tokens": 21,
+            "delta_prompt_tokens": 1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "10",
+            "explicit_reasoning_tokens": 49,
+            "referential_reasoning_tokens": 49,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "11",
+            "explicit_reasoning_tokens": 75,
+            "referential_reasoning_tokens": 89,
+            "delta_reasoning_tokens": 14,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "13",
+            "explicit_reasoning_tokens": 86,
+            "referential_reasoning_tokens": 55,
+            "delta_reasoning_tokens": -31,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "14",
+            "explicit_reasoning_tokens": 63,
+            "referential_reasoning_tokens": 63,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "15",
+            "explicit_reasoning_tokens": 51,
+            "referential_reasoning_tokens": 45,
+            "delta_reasoning_tokens": -6,
+            "delta_prompt_tokens": -5,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          }
+        ],
+        "complete_reasoning_pairs": 12,
+        "explicit_reasoning_tokens": {
+          "n": 12,
+          "mean": 75.58333333333333,
+          "median": 75.5,
+          "min": 45,
+          "max": 120
+        },
+        "referential_reasoning_tokens": {
+          "n": 12,
+          "mean": 88.08333333333333,
+          "median": 90.5,
+          "min": 45,
+          "max": 187
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 12,
+          "mean": 12.5,
+          "median": 6.0,
+          "min": -31,
+          "max": 67
+        },
+        "delta_signs": {
+          "positive": 6,
+          "zero": 3,
+          "negative": 3
+        },
+        "paired_prompt_token_delta": {
+          "n": 12,
+          "mean": -3.4166666666666665,
+          "median": -4.0,
+          "min": -6,
+          "max": 1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 12,
+          "mean": 12.5,
+          "median": 6.0,
+          "min": -31,
+          "max": 67
+        }
+      },
+      "ambiguous_diagnostic": {
+        "pairs": [
+          {
+            "item_id": "04",
+            "explicit_reasoning_tokens": 88,
+            "referential_reasoning_tokens": 80,
+            "delta_reasoning_tokens": -8,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "08",
+            "explicit_reasoning_tokens": 45,
+            "referential_reasoning_tokens": 78,
+            "delta_reasoning_tokens": 33,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "12",
+            "explicit_reasoning_tokens": 391,
+            "referential_reasoning_tokens": 575,
+            "delta_reasoning_tokens": 184,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": false,
+            "referential_correct": false,
+            "provider": "Google AI Studio"
+          },
+          {
+            "item_id": "16",
+            "explicit_reasoning_tokens": 40,
+            "referential_reasoning_tokens": 411,
+            "delta_reasoning_tokens": 371,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "Google AI Studio"
+          }
+        ],
+        "complete_reasoning_pairs": 4,
+        "explicit_reasoning_tokens": {
+          "n": 4,
+          "mean": 141,
+          "median": 66.5,
+          "min": 40,
+          "max": 391
+        },
+        "referential_reasoning_tokens": {
+          "n": 4,
+          "mean": 286,
+          "median": 245.5,
+          "min": 78,
+          "max": 575
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 4,
+          "mean": 145,
+          "median": 108.5,
+          "min": -8,
+          "max": 371
+        },
+        "delta_signs": {
+          "positive": 3,
+          "zero": 0,
+          "negative": 1
+        },
+        "paired_prompt_token_delta": {
+          "n": 4,
+          "mean": -3,
+          "median": -3.5,
+          "min": -4,
+          "max": -1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 4,
+            "mean": 0.75,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 4,
+            "mean": 0.25,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 1,
+          "mean": -8,
+          "median": -8,
+          "min": -8,
+          "max": -8
+        }
+      }
+    },
+    "openai/gpt-5.6-sol": {
+      "provider": [
+        "OpenAI"
+      ],
+      "reported_cost_usd": 0.010386,
+      "strictly_formatted_calls": 32,
+      "primary": {
+        "pairs": [
+          {
+            "item_id": "01",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "02",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 32,
+            "delta_reasoning_tokens": 32,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "03",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "05",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "06",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "07",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "09",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 55,
+            "delta_reasoning_tokens": 55,
+            "delta_prompt_tokens": 1,
+            "explicit_correct": false,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "10",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "11",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "13",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "14",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "15",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -5,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          }
+        ],
+        "complete_reasoning_pairs": 12,
+        "explicit_reasoning_tokens": {
+          "n": 12,
+          "mean": 0,
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "referential_reasoning_tokens": {
+          "n": 12,
+          "mean": 7.25,
+          "median": 0.0,
+          "min": 0,
+          "max": 55
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 12,
+          "mean": 7.25,
+          "median": 0.0,
+          "min": 0,
+          "max": 55
+        },
+        "delta_signs": {
+          "positive": 2,
+          "zero": 10,
+          "negative": 0
+        },
+        "paired_prompt_token_delta": {
+          "n": 12,
+          "mean": -3.4166666666666665,
+          "median": -4.0,
+          "min": -6,
+          "max": 1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 12,
+            "mean": 0.9166666666666666,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 11,
+          "mean": 2.909090909090909,
+          "median": 0,
+          "min": 0,
+          "max": 32
+        }
+      },
+      "ambiguous_diagnostic": {
+        "pairs": [
+          {
+            "item_id": "04",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 28,
+            "delta_reasoning_tokens": 28,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "08",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "12",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 19,
+            "delta_reasoning_tokens": 19,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          },
+          {
+            "item_id": "16",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 72,
+            "delta_reasoning_tokens": 72,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "OpenAI"
+          }
+        ],
+        "complete_reasoning_pairs": 4,
+        "explicit_reasoning_tokens": {
+          "n": 4,
+          "mean": 0,
+          "median": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "referential_reasoning_tokens": {
+          "n": 4,
+          "mean": 29.75,
+          "median": 23.5,
+          "min": 0,
+          "max": 72
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 4,
+          "mean": 29.75,
+          "median": 23.5,
+          "min": 0,
+          "max": 72
+        },
+        "delta_signs": {
+          "positive": 3,
+          "zero": 1,
+          "negative": 0
+        },
+        "paired_prompt_token_delta": {
+          "n": 4,
+          "mean": -3,
+          "median": -3.5,
+          "min": -4,
+          "max": -1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 4,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 4,
+            "mean": 0.75,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 3,
+          "mean": 39.666666666666664,
+          "median": 28,
+          "min": 19,
+          "max": 72
+        }
+      }
+    },
+    "qwen/qwen3.8-max": {
+      "provider": [
+        "Alibaba"
+      ],
+      "reported_cost_usd": 0.039522,
+      "strictly_formatted_calls": 32,
+      "primary": {
+        "pairs": [
+          {
+            "item_id": "01",
+            "explicit_reasoning_tokens": 119,
+            "referential_reasoning_tokens": 113,
+            "delta_reasoning_tokens": -6,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "02",
+            "explicit_reasoning_tokens": 123,
+            "referential_reasoning_tokens": 172,
+            "delta_reasoning_tokens": 49,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "03",
+            "explicit_reasoning_tokens": 98,
+            "referential_reasoning_tokens": 91,
+            "delta_reasoning_tokens": -7,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "05",
+            "explicit_reasoning_tokens": 99,
+            "referential_reasoning_tokens": 140,
+            "delta_reasoning_tokens": 41,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "06",
+            "explicit_reasoning_tokens": 164,
+            "referential_reasoning_tokens": 213,
+            "delta_reasoning_tokens": 49,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "07",
+            "explicit_reasoning_tokens": 125,
+            "referential_reasoning_tokens": 135,
+            "delta_reasoning_tokens": 10,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "09",
+            "explicit_reasoning_tokens": 152,
+            "referential_reasoning_tokens": 156,
+            "delta_reasoning_tokens": 4,
+            "delta_prompt_tokens": 1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "10",
+            "explicit_reasoning_tokens": 64,
+            "referential_reasoning_tokens": 60,
+            "delta_reasoning_tokens": -4,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "11",
+            "explicit_reasoning_tokens": 98,
+            "referential_reasoning_tokens": 132,
+            "delta_reasoning_tokens": 34,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "13",
+            "explicit_reasoning_tokens": 161,
+            "referential_reasoning_tokens": 119,
+            "delta_reasoning_tokens": -42,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "14",
+            "explicit_reasoning_tokens": 91,
+            "referential_reasoning_tokens": 91,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "15",
+            "explicit_reasoning_tokens": 107,
+            "referential_reasoning_tokens": 101,
+            "delta_reasoning_tokens": -6,
+            "delta_prompt_tokens": -5,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          }
+        ],
+        "complete_reasoning_pairs": 12,
+        "explicit_reasoning_tokens": {
+          "n": 12,
+          "mean": 116.75,
+          "median": 113.0,
+          "min": 64,
+          "max": 164
+        },
+        "referential_reasoning_tokens": {
+          "n": 12,
+          "mean": 126.91666666666667,
+          "median": 125.5,
+          "min": 60,
+          "max": 213
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 12,
+          "mean": 10.166666666666666,
+          "median": 2.0,
+          "min": -42,
+          "max": 49
+        },
+        "delta_signs": {
+          "positive": 6,
+          "zero": 1,
+          "negative": 5
+        },
+        "paired_prompt_token_delta": {
+          "n": 12,
+          "mean": -3.3333333333333335,
+          "median": -4.0,
+          "min": -6,
+          "max": 1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 12,
+          "mean": 10.166666666666666,
+          "median": 2.0,
+          "min": -42,
+          "max": 49
+        }
+      },
+      "ambiguous_diagnostic": {
+        "pairs": [
+          {
+            "item_id": "04",
+            "explicit_reasoning_tokens": 83,
+            "referential_reasoning_tokens": 140,
+            "delta_reasoning_tokens": 57,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "08",
+            "explicit_reasoning_tokens": 87,
+            "referential_reasoning_tokens": 91,
+            "delta_reasoning_tokens": 4,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "12",
+            "explicit_reasoning_tokens": 530,
+            "referential_reasoning_tokens": 546,
+            "delta_reasoning_tokens": 16,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": false,
+            "referential_correct": false,
+            "provider": "Alibaba"
+          },
+          {
+            "item_id": "16",
+            "explicit_reasoning_tokens": 124,
+            "referential_reasoning_tokens": 504,
+            "delta_reasoning_tokens": 380,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "Alibaba"
+          }
+        ],
+        "complete_reasoning_pairs": 4,
+        "explicit_reasoning_tokens": {
+          "n": 4,
+          "mean": 206,
+          "median": 105.5,
+          "min": 83,
+          "max": 530
+        },
+        "referential_reasoning_tokens": {
+          "n": 4,
+          "mean": 320.25,
+          "median": 322.0,
+          "min": 91,
+          "max": 546
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 4,
+          "mean": 114.25,
+          "median": 36.5,
+          "min": 4,
+          "max": 380
+        },
+        "delta_signs": {
+          "positive": 4,
+          "zero": 0,
+          "negative": 0
+        },
+        "paired_prompt_token_delta": {
+          "n": 4,
+          "mean": -3,
+          "median": -3.5,
+          "min": -4,
+          "max": -1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 4,
+            "mean": 0.75,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 4,
+            "mean": 0.5,
+            "median": 0.5,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 2,
+          "mean": 218.5,
+          "median": 218.5,
+          "min": 57,
+          "max": 380
+        }
+      }
+    },
+    "z-ai/glm-5.3-flash": {
+      "provider": [
+        "GMICloud"
+      ],
+      "reported_cost_usd": 0.00121755,
+      "strictly_formatted_calls": 31,
+      "primary": {
+        "pairs": [
+          {
+            "item_id": "01",
+            "explicit_reasoning_tokens": 87,
+            "referential_reasoning_tokens": 68,
+            "delta_reasoning_tokens": -19,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "02",
+            "explicit_reasoning_tokens": 44,
+            "referential_reasoning_tokens": 191,
+            "delta_reasoning_tokens": 147,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "03",
+            "explicit_reasoning_tokens": 9,
+            "referential_reasoning_tokens": 9,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "05",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 90,
+            "delta_reasoning_tokens": 90,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "06",
+            "explicit_reasoning_tokens": 16,
+            "referential_reasoning_tokens": 218,
+            "delta_reasoning_tokens": 202,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "07",
+            "explicit_reasoning_tokens": 34,
+            "referential_reasoning_tokens": 49,
+            "delta_reasoning_tokens": 15,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "09",
+            "explicit_reasoning_tokens": 54,
+            "referential_reasoning_tokens": 53,
+            "delta_reasoning_tokens": -1,
+            "delta_prompt_tokens": 1,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "10",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "11",
+            "explicit_reasoning_tokens": 52,
+            "referential_reasoning_tokens": 241,
+            "delta_reasoning_tokens": 189,
+            "delta_prompt_tokens": -2,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "13",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 7,
+            "delta_reasoning_tokens": 7,
+            "delta_prompt_tokens": -6,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "14",
+            "explicit_reasoning_tokens": 32,
+            "referential_reasoning_tokens": 16,
+            "delta_reasoning_tokens": -16,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "15",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 25,
+            "delta_reasoning_tokens": 25,
+            "delta_prompt_tokens": -5,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          }
+        ],
+        "complete_reasoning_pairs": 12,
+        "explicit_reasoning_tokens": {
+          "n": 12,
+          "mean": 27.333333333333332,
+          "median": 24.0,
+          "min": 0,
+          "max": 87
+        },
+        "referential_reasoning_tokens": {
+          "n": 12,
+          "mean": 80.58333333333333,
+          "median": 51.0,
+          "min": 0,
+          "max": 241
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 12,
+          "mean": 53.25,
+          "median": 11.0,
+          "min": -19,
+          "max": 202
+        },
+        "delta_signs": {
+          "positive": 7,
+          "zero": 2,
+          "negative": 3
+        },
+        "paired_prompt_token_delta": {
+          "n": 12,
+          "mean": -3.3333333333333335,
+          "median": -4.0,
+          "min": -6,
+          "max": 1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 12,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 12,
+          "mean": 53.25,
+          "median": 11.0,
+          "min": -19,
+          "max": 202
+        }
+      },
+      "ambiguous_diagnostic": {
+        "pairs": [
+          {
+            "item_id": "04",
+            "explicit_reasoning_tokens": 0,
+            "referential_reasoning_tokens": 324,
+            "delta_reasoning_tokens": 324,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "08",
+            "explicit_reasoning_tokens": 40,
+            "referential_reasoning_tokens": 0,
+            "delta_reasoning_tokens": -40,
+            "delta_prompt_tokens": -1,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "12",
+            "explicit_reasoning_tokens": 5,
+            "referential_reasoning_tokens": 2047,
+            "delta_reasoning_tokens": 2042,
+            "delta_prompt_tokens": -4,
+            "explicit_correct": true,
+            "referential_correct": false,
+            "provider": "GMICloud"
+          },
+          {
+            "item_id": "16",
+            "explicit_reasoning_tokens": 23,
+            "referential_reasoning_tokens": 23,
+            "delta_reasoning_tokens": 0,
+            "delta_prompt_tokens": -3,
+            "explicit_correct": true,
+            "referential_correct": true,
+            "provider": "GMICloud"
+          }
+        ],
+        "complete_reasoning_pairs": 4,
+        "explicit_reasoning_tokens": {
+          "n": 4,
+          "mean": 17,
+          "median": 14.0,
+          "min": 0,
+          "max": 40
+        },
+        "referential_reasoning_tokens": {
+          "n": 4,
+          "mean": 598.5,
+          "median": 173.5,
+          "min": 0,
+          "max": 2047
+        },
+        "paired_delta_referential_minus_explicit": {
+          "n": 4,
+          "mean": 581.5,
+          "median": 162.0,
+          "min": -40,
+          "max": 2042
+        },
+        "delta_signs": {
+          "positive": 2,
+          "zero": 1,
+          "negative": 1
+        },
+        "paired_prompt_token_delta": {
+          "n": 4,
+          "mean": -3,
+          "median": -3.5,
+          "min": -4,
+          "max": -1
+        },
+        "accuracy": {
+          "explicit": {
+            "n": 4,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "referential": {
+            "n": 4,
+            "mean": 0.5,
+            "median": 0.5,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "both_correct_sensitivity_delta": {
+          "n": 2,
+          "mean": 162,
+          "median": 162.0,
+          "min": 0,
+          "max": 324
+        }
+      }
+    }
+  }
+}

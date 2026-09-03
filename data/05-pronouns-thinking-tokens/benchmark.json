@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "reference-style-reasoning-v1",
+  "frozen_at": "2026-09-03",
+  "source": "PROMPT_PAIRS.md",
+  "source_sha256": "c62ba5dcf38a4f42b2ef1665a63e825854898ed48d7bb91d41267d54e8885d86",
+  "system_prompt": "Solve the task. Return exactly OPTION A, OPTION B, OPTION C, or OPTION D and nothing else.",
+  "conditions": [
+    "explicit",
+    "referential"
+  ],
+  "counterbalancing": "odd items explicit-first; even items referential-first",
+  "primary_outcome": "reasoning_tokens(referential) - reasoning_tokens(explicit)",
+  "items": [
+    {
+      "id": "01",
+      "family": "container tracking",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 2,
+      "max_antecedent_distance_words_approx": 13,
+      "answer": "OPTION A",
+      "prompts": {
+        "explicit": "The amber chest starts on shelf 2. Move the amber chest to shelf 4. Put the blue key inside the amber chest. Move the amber chest to shelf 1. Which shelf contains the blue key?\n\nOPTION A: shelf 1\nOPTION B: shelf 2\nOPTION C: shelf 3\nOPTION D: shelf 4",
+        "referential": "The amber chest starts on shelf 2. Move it to shelf 4. Put the blue key inside it. Move it to shelf 1. Which shelf contains the blue key?\n\nOPTION A: shelf 1\nOPTION B: shelf 2\nOPTION C: shelf 3\nOPTION D: shelf 4"
+      }
+    },
+    {
+      "id": "02",
+      "family": "nested state tracking",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 5,
+      "max_antecedent_distance_words_approx": 15,
+      "answer": "OPTION B",
+      "prompts": {
+        "explicit": "Robot M holds the copper token. Robot J holds the silver token. Robot M gives the copper token to Robot J. Robot J puts the copper token in the green box. Robot R moves the green box to room 3. Which room contains the copper token?\n\nOPTION A: room 1\nOPTION B: room 3\nOPTION C: room 2\nOPTION D: Robot J is still carrying the copper token",
+        "referential": "Robot M holds the copper token. Robot J holds the silver token. The first robot gives it to the second. That robot puts it in the green box. Robot R moves that box to room 3. Which room contains the copper token?\n\nOPTION A: room 1\nOPTION B: room 3\nOPTION C: room 2\nOPTION D: Robot J is still carrying the copper token"
+      }
+    },
+    {
+      "id": "03",
+      "family": "quantity tracking",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": true,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 7,
+      "answer": "OPTION C",
+      "prompts": {
+        "explicit": "Robot K starts with 8 energy units. Robot K transfers 3 units to Robot L. Robot K receives 5 units from Robot A. Robot K transfers 4 units to Robot N. How many units does Robot K have now?\n\nOPTION A: 4\nOPTION B: 5\nOPTION C: 6\nOPTION D: 7",
+        "referential": "Robot K starts with 8 energy units. It transfers 3 units to Robot L. It receives 5 units from Robot A. It transfers 4 units to Robot N. How many units does it have now?\n\nOPTION A: 4\nOPTION B: 5\nOPTION C: 6\nOPTION D: 7"
+      }
+    },
+    {
+      "id": "04",
+      "family": "object update",
+      "analysis_set": "diagnostic",
+      "ambiguity": "deliberately_ambiguous",
+      "near_length_matched": false,
+      "entity_count": 2,
+      "max_antecedent_distance_words_approx": 14,
+      "answer": "OPTION D",
+      "prompts": {
+        "explicit": "The red cylinder is on table 1, and the blue cube is on table 2. Move the red cylinder to table 4. Paint the red cylinder green. Which table contains the green object?\n\nOPTION A: table 1\nOPTION B: table 2\nOPTION C: table 3\nOPTION D: table 4",
+        "referential": "The red cylinder is on table 1, and the blue cube is on table 2. Move it to table 4. Paint it green. Which table contains the green object?\n\nOPTION A: table 1\nOPTION B: table 2\nOPTION C: table 3\nOPTION D: table 4"
+      }
+    },
+    {
+      "id": "05",
+      "family": "ordering",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 5,
+      "max_antecedent_distance_words_approx": 8,
+      "answer": "OPTION A",
+      "prompts": {
+        "explicit": "The Aster rod is longer than the Birch rod. The Birch rod is longer than the Coral rod. The Coral rod is longer than the Drift rod. The Drift rod is longer than the Elm rod. Which rod is second longest?\n\nOPTION A: Birch\nOPTION B: Coral\nOPTION C: Drift\nOPTION D: Elm",
+        "referential": "The Aster rod is longer than the Birch rod. The latter is longer than the Coral rod. That newly mentioned rod is longer than the Drift rod. The latter is longer than the Elm rod. Which rod is second longest?\n\nOPTION A: Birch\nOPTION B: Coral\nOPTION C: Drift\nOPTION D: Elm"
+      }
+    },
+    {
+      "id": "06",
+      "family": "spatial relations",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 11,
+      "answer": "OPTION B",
+      "prompts": {
+        "explicit": "The red marker is one step north of the blue marker. The blue marker is one step east of the green marker. The green marker is one step south of the gold marker. Where is the red marker relative to the green marker?\n\nOPTION A: north\nOPTION B: northeast\nOPTION C: east\nOPTION D: southwest",
+        "referential": "The red marker is one step north of the blue marker. That blue one is one step east of the green marker. The latter is one step south of the gold marker. Where is the red marker relative to the green marker?\n\nOPTION A: north\nOPTION B: northeast\nOPTION C: east\nOPTION D: southwest"
+      }
+    },
+    {
+      "id": "07",
+      "family": "path integration",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": true,
+      "entity_count": 2,
+      "max_antecedent_distance_words_approx": 7,
+      "answer": "OPTION C",
+      "prompts": {
+        "explicit": "Drone L starts one step north of beacon A. Drone L moves two steps east. Drone L moves one step south. Drone L moves three steps west. Where is Drone L relative to beacon A?\n\nOPTION A: north\nOPTION B: east\nOPTION C: west\nOPTION D: south",
+        "referential": "Drone L starts one step north of beacon A. It moves two steps east. It moves one step south. It moves three steps west. Where is it relative to beacon A?\n\nOPTION A: north\nOPTION B: east\nOPTION C: west\nOPTION D: south"
+      }
+    },
+    {
+      "id": "08",
+      "family": "spatial update",
+      "analysis_set": "diagnostic",
+      "ambiguity": "deliberately_ambiguous",
+      "near_length_matched": false,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 13,
+      "answer": "OPTION D",
+      "prompts": {
+        "explicit": "The triangle is left of the square. The circle is right of the square. The star is above the circle. Move the circle below the triangle. Which object was moved?\n\nOPTION A: square\nOPTION B: triangle\nOPTION C: star\nOPTION D: circle",
+        "referential": "The triangle is left of the square. The circle is right of the square. The star is above the circle. Move it below the triangle. Which object was moved?\n\nOPTION A: square\nOPTION B: triangle\nOPTION C: star\nOPTION D: circle"
+      }
+    },
+    {
+      "id": "09",
+      "family": "cup permutation",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 6,
+      "max_antecedent_distance_words_approx": 8,
+      "answer": "OPTION A",
+      "prompts": {
+        "explicit": "The red token starts in Cup A, the blue token in Cup B, and the green token in Cup C. Swap the contents of Cup A and Cup C. Then swap the contents of Cup A and Cup B. Where is the red token?\n\nOPTION A: Cup C\nOPTION B: Cup A\nOPTION C: Cup B\nOPTION D: outside all cups",
+        "referential": "The red token starts in Cup A, the blue token in Cup B, and the green token in Cup C. Swap the contents of Cup A and Cup C. Then swap the contents of the first one and Cup B. Where is the red token?\n\nOPTION A: Cup C\nOPTION B: Cup A\nOPTION C: Cup B\nOPTION D: outside all cups"
+      }
+    },
+    {
+      "id": "10",
+      "family": "exchange sequence",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": true,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 6,
+      "answer": "OPTION B",
+      "prompts": {
+        "explicit": "Robot N holds Card A. Robot N swaps Card A for Card B. Robot N swaps Card B for Card C. Which card does Robot N hold now?\n\nOPTION A: Card B\nOPTION B: Card C\nOPTION C: Card A\nOPTION D: no card",
+        "referential": "Robot N holds Card A. It swaps Card A for Card B. It swaps Card B for Card C. Which card does it hold now?\n\nOPTION A: Card B\nOPTION B: Card C\nOPTION C: Card A\nOPTION D: no card"
+      }
+    },
+    {
+      "id": "11",
+      "family": "nested container permutation",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 3,
+      "max_antecedent_distance_words_approx": 10,
+      "answer": "OPTION C",
+      "prompts": {
+        "explicit": "The coin is in Box R. Box R is inside Crate S. Move Crate S to room 2. Remove Box R from Crate S and put Box R in room 4. Which room contains the coin?\n\nOPTION A: room 2\nOPTION B: room 3\nOPTION C: room 4\nOPTION D: room 1",
+        "referential": "The coin is in Box R. It is inside Crate S. Move that crate to room 2. Remove the box from it and put the box in room 4. Which room contains the coin?\n\nOPTION A: room 2\nOPTION B: room 3\nOPTION C: room 4\nOPTION D: room 1"
+      }
+    },
+    {
+      "id": "12",
+      "family": "paired swap",
+      "analysis_set": "diagnostic",
+      "ambiguity": "deliberately_ambiguous",
+      "near_length_matched": false,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 10,
+      "answer": "OPTION D",
+      "prompts": {
+        "explicit": "Card P is in Box X, and Card Q is in Box Y. The two cards are beside the two boxes. Swap Card P and Card Q. Which box contains Card P afterward?\n\nOPTION A: Box X\nOPTION B: neither box\nOPTION C: both boxes\nOPTION D: Box Y",
+        "referential": "Card P is in Box X, and Card Q is in Box Y. The two cards are beside the two boxes. Swap them. Which box contains Card P afterward?\n\nOPTION A: Box X\nOPTION B: neither box\nOPTION C: both boxes\nOPTION D: Box Y"
+      }
+    },
+    {
+      "id": "13",
+      "family": "transport plan",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 3,
+      "max_antecedent_distance_words_approx": 8,
+      "answer": "OPTION A",
+      "prompts": {
+        "explicit": "Drone D and Parcel P start at Dock 1. Drone D picks up Parcel P. Drone D moves to Dock 2. Drone D drops Parcel P. Drone D picks up Key K at Dock 2 and moves to Dock 3. Where is Parcel P at the end?\n\nOPTION A: Dock 2\nOPTION B: Dock 1\nOPTION C: Dock 3\nOPTION D: carried by Drone D",
+        "referential": "Drone D and Parcel P start at Dock 1. It picks it up. It moves to Dock 2. It drops it there. It picks up Key K at that dock and moves to Dock 3. Where is Parcel P at the end?\n\nOPTION A: Dock 2\nOPTION B: Dock 1\nOPTION C: Dock 3\nOPTION D: carried by Drone D"
+      }
+    },
+    {
+      "id": "14",
+      "family": "resource accounting",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": true,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 7,
+      "answer": "OPTION B",
+      "prompts": {
+        "explicit": "Rover M starts with 7 energy units. Rover M spends 2 units opening a gate. Rover M gains 4 units at a charger. Rover M spends 6 units crossing a bridge. How many energy units does Rover M have now?\n\nOPTION A: 2\nOPTION B: 3\nOPTION C: 4\nOPTION D: 5",
+        "referential": "Rover M starts with 7 energy units. It spends 2 units opening a gate. It gains 4 units at a charger. It spends 6 units crossing a bridge. How many energy units does it have now?\n\nOPTION A: 2\nOPTION B: 3\nOPTION C: 4\nOPTION D: 5"
+      }
+    },
+    {
+      "id": "15",
+      "family": "handoff plan",
+      "analysis_set": "primary",
+      "ambiguity": "unambiguous",
+      "near_length_matched": false,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 10,
+      "answer": "OPTION C",
+      "prompts": {
+        "explicit": "Robot E carries the glass lens. Robot E walks from the workshop to the lab. Robot E gives the glass lens to Robot Z. Robot Z installs the glass lens in the camera. Where is the glass lens at the end?\n\nOPTION A: workshop\nOPTION B: carried by Robot E\nOPTION C: camera\nOPTION D: carried by Robot Z",
+        "referential": "Robot E carries the glass lens. It walks from the workshop to the lab. It gives the lens to Robot Z. That robot installs it in the camera. Where is the glass lens at the end?\n\nOPTION A: workshop\nOPTION B: carried by Robot E\nOPTION C: camera\nOPTION D: carried by Robot Z"
+      }
+    },
+    {
+      "id": "16",
+      "family": "pickup plan",
+      "analysis_set": "diagnostic",
+      "ambiguity": "deliberately_ambiguous",
+      "near_length_matched": false,
+      "entity_count": 4,
+      "max_antecedent_distance_words_approx": 12,
+      "answer": "OPTION D",
+      "prompts": {
+        "explicit": "Robot A is beside Robot B. Parcel X is beside Parcel Y. Robot A picks up Parcel X and carries Parcel X to Bay 4. Which parcel is at Bay 4?\n\nOPTION A: both parcels\nOPTION B: Parcel Y\nOPTION C: neither parcel\nOPTION D: Parcel X",
+        "referential": "Robot A is beside Robot B. Parcel X is beside Parcel Y. It picks it up and carries it to Bay 4. Which parcel is at Bay 4?\n\nOPTION A: both parcels\nOPTION B: Parcel Y\nOPTION C: neither parcel\nOPTION D: Parcel X"
+      }
+    }
+  ]
+}
